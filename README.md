@@ -17,7 +17,7 @@
 | Day05 | epoll边缘触发(ET) | 高效模式、非阻塞I/O、惊群效应 |
 | Day06 | 非阻塞I/O | O_NONBLOCK、connect/accept/recv非阻塞 |
 | Day07 | Reactor模式基础 | 事件源、事件分发、Handler注册 |
-| Day08 | 完整Reactor实现 | Echo服务器、多路复用整合 |
+| Day08 | 完整Reactor实现 ✓ | 优雅关闭、连接统计 |
 | Day09 | 多线程Reactor | 线程安全、锁策略、负载均衡 |
 | Day10 | 线程池实现 | 任务队列、Worker线程、线程管理 |
 | Day11 | 定时器实现 | 最小堆、时间轮、过期连接处理 |

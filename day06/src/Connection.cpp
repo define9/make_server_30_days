@@ -63,7 +63,6 @@ bool Connection::handleRead()
     char buffer[BUFFER_SIZE];
     bool hasData = false;
 
-    // 现在是ET边缘触发，只通知了一次所以要读完
     while (true) {
         ssize_t bytesRead = ::read(m_fd, buffer, sizeof(buffer));
 
@@ -101,7 +100,6 @@ bool Connection::handleRead()
 
 bool Connection::handleWrite()
 {
-    // 现在是ET边缘触发，只通知了一次所以要写完
     while (!m_writeBuffer.empty()) {
         ssize_t bytesWritten = ::write(m_fd, m_writeBuffer.c_str(), m_writeBuffer.size());
 
