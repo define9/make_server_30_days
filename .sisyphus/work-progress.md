@@ -1,10 +1,10 @@
-# Work Progress - 30天C++多路复用服务器
+# Work Progress - 25天C++ HTTP服务器
 
 ## 项目信息
 
 - **开始日期**: 2026-03-20
-- **进度**: 13/30 天
-- **状态**: Day13完成
+- **进度**: 17/25 天
+- **状态**: Day17完成
 
 ## 已完成内容
 
@@ -254,6 +254,71 @@
 - **编译状态**: ✓ 编译成功
 - **可运行**: `cd day13 && make && ./server 8080`
 
+### Day14 - 配置系统 ✓
+- **目录**: `day14/src/`
+- **文件**:
+  - 继承Day13所有文件
+  - `config/Config.h/cpp`: 配置管理器（单例）
+  - `config/ConfigFile.h/cpp`: 配置文件解析
+  - `main.cpp`: 程序入口（使用配置系统）
+  - `server.conf`: 配置文件
+- **功能**: 配置系统，支持配置文件解析
+- **核心改进**:
+  - **Config类**: 全局配置管理器（单例模式）
+  - **ConfigFile类**: 解析配置文件（key=value格式）
+  - **配置项**: port、threadPoolSize、logLevel等
+  - **与日志系统集成**: 日志级别可配置
+- **编译状态**: ✓ 编译成功
+- **可运行**: `cd day14 && make && ./server`
+
+### Day15 - 信号处理 ✓
+- **目录**: `day15/src/`
+- **文件**:
+  - 继承Day14所有文件
+  - `signal/SignalHandler.h/cpp`: 信号处理器
+  - `main.cpp`: 程序入口（集成信号处理）
+- **功能**: 信号处理，支持优雅退出
+- **核心改进**:
+  - **SignalHandler类**: 统一管理SIGTERM/SIGINT
+  - **优雅退出**: 收到信号后停止接受新连接，关闭现有连接
+  - **与Reactor集成**: 信号触发事件循环退出
+- **编译状态**: ✓ 编译成功
+- **可运行**: `cd day15 && make && ./server`
+
+### Day16 - 网络选项优化 ✓
+- **目录**: `day16/src/`
+- **文件**:
+  - 继承Day15所有文件
+  - `socket/SocketOptions.h`: Socket选项管理
+  - `Server.cpp`: 应用ServerOptions
+  - `Connection.cpp`: 应用TCP_NODELAY
+  - `server.conf`: 新增socket选项配置
+- **功能**: Socket选项优化
+- **核心改进**:
+  - **SO_REUSEADDR**: 允许bindTIME_WAIT地址
+  - **SO_REUSEPORT**: 多进程共享监听端口（Linux 3.9+）
+  - **TCP_NODELAY**: 禁用Nagle算法，降低延迟
+  - **SO_KEEPALIVE**: TCP保活检测
+- **编译状态**: ✓ 编译成功
+- **可运行**: `cd day16 && make && ./server`
+
+### Day17 - HTTP协议解析 ✓
+- **目录**: `day17/src/`
+- **文件**:
+  - 继承Day16所有文件
+  - `http/HttpRequest.h/cpp`: HTTP请求
+  - `http/HttpResponse.h/cpp`: HTTP响应
+  - `http/HttpParser.h/cpp`: HTTP解析器（状态机）
+  - `Connection.cpp`: 使用HttpParser
+- **功能**: HTTP协议解析
+- **核心改进**:
+  - **HttpRequest**: 解析请求方法、URL、版本、头部
+  - **HttpResponse**: 构建响应，支持常见状态码
+  - **HttpParser**: 状态机解析（READ_REQUEST_LINE→READ_HEADERS→READ_BODY）
+  - **Connection改造**: Echo改为返回HTTP响应
+- **编译状态**: ✓ 编译成功
+- **可运行**: `cd day17 && make && ./server`
+
 ## 设计要点符合用户要求
 
 - ✓ **每天独立目录**: `day01/` ~ `day13/` 已创建
@@ -292,29 +357,36 @@ Day11: 定时器实现（最小堆 + 时间轮）
 Day12: 连接超时管理（空闲检测 + 资源回收）
   ↓
 Day13: 基础日志系统（日志级别 + 格式化输出）
+  ↓
+Day14: 配置系统（key=value配置、配置管理器）
+  ↓
+Day15: 信号处理（SIGTERM/SIGINT、优雅退出）
+  ↓
+Day16: 网络选项优化（SO_REUSEADDR、TCP_NODELAY）
+  ↓
+Day17: HTTP协议解析（状态机、请求/响应）
 ```
 
-## 后续计划 (Day14 - Day30)
+## 后续计划 (Day18 - Day25)
 
 | Day | 主题 | 核心新增 |
 |-----|------|----------|
-| 14 | 配置系统 | 配置文件解析 |
-| 15 | 信号处理 | 优雅退出 |
-| 16 | 地址复用 | SO_REUSEADDR |
-| 17 | TCP_NODELAY | 禁用Nagle |
-| 18 | Proactor模式 | 异步I/O模型 |
-| 19 | 事件循环原理 | libuv/libevent机制 |
-| 20 | 自定义事件循环 | 跨平台抽象 |
-| 21 | 连接池 | 连接复用 |
-| 22 | HTTP服务器 | 协议解析 |
-| 23 | HTTP长连接 | Keep-Alive |
-| 24 | Chunked传输 | 分块响应 |
-| 25 | SSL/TLS基础 | 加密通信 |
-| 26 | OpenSSL集成 | 生产级安全 |
-| 27 | 负载均衡 | 连接分配 |
-| 28 | 反向代理 | 完整代理 |
-| 29 | 性能优化 | benchmarks |
-| 30 | 完整框架 | 架构整合 |
+| 18 | HTTP长连接 | Keep-Alive、Connection头 |
+| 19 | Chunked分块传输 | Transfer-Encoding: chunked |
+| 20 | 静态文件服务 | 文件读取、MIME类型 |
+| 21 | 连接超时与优雅关闭 | 资源回收 |
+| 22 | 整合测试 | 模块联调 |
+| 23 | 细节打磨 | 错误处理 |
+| 24 | SSE/Stream HTTP | text/event-stream、流式推送 |
+| 25 | 完整HTTP服务器 | 架构整合 |
+
+## 最终目标
+
+一个小而完整的HTTP服务器，支持：
+- 长连接 (Keep-Alive)
+- Chunked分块传输
+- SSE (Server-Sent Events)
+- 静态文件服务
 
 ## 编译指令备忘
 
@@ -358,8 +430,21 @@ cd day12 && make clean && make && sudo ./server 8080
 # 编译Day13
 cd day13 && make clean && make && sudo ./server 8080
 
+
+# Day14
+cd day14 && make clean && make && sudo ./server
+
+# Day15
+cd day15 && make clean && make && sudo ./server
+
+# Day16
+cd day16 && make clean && make && sudo ./server
+
+# Day17
+cd day17 && make clean && make && sudo ./server
+
 # 清理所有
-for d in day{01,02,03,04,05,06,07,08,09,10,11,12,13}; do cd $d && make clean && cd ..; done
+for d in day{01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17}; do cd $d && make clean && cd ..; done
 ```
 
 ## 设计原则回顾

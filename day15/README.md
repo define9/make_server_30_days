@@ -88,30 +88,31 @@ public:
 ```cpp
 int main() {
     ReactorPool reactorPool(port, workers);
-    ThreadPool threadPool(numThreads);
 
     // 注册信号回调
     SignalHandler::instance().onShutdown([&]() {
         LOG_INFO("Shutting down...");
         reactorPool.stop();
-        threadPool.stop();
     });
 
     SignalHandler::instance().onReload([]() {
         LOG_INFO("Reloading config...");
-        Config::instance().reload();
     });
 
     SignalHandler::instance().start();
     reactorPool.start();
 
-    // 等待信号
-    SignalHandler::instance().wait();
-
+    // 唯一的阻塞点：等待 reactor 退出
+    // epoll_wait() 会被信号中断（SA_RESTART），然后触发 shutdown callback
     reactorPool.waitForExit();
+
     return 0;
 }
 ```
+
+> **注意**：`signalHandler.wait()` 是冗余的——因为 `waitForExit()` 内部调用 `m_mainReactor->loop()`，
+> 其中 `epoll_wait()` 会被信号中断并重启，中断后触发 shutdown callback 使 reactor 停止，
+> 最终整个程序结束。只需要一个阻塞点。
 
 ## 信号与线程安全
 
@@ -167,10 +168,15 @@ Config file: server.conf
 Port: 8080
 ...
 Signal handler started
+Main Reactor started
+Worker Reactor 0 started
+...
 
 # 按Ctrl+C或kill -SIGTERM
 Received SIGINT/SIGTERM, initiating shutdown...
 Signal shutdown callback triggered
+Signal shutdown callback triggered end
+Main Reactor stopped
 Server stopped gracefully
 ```
 

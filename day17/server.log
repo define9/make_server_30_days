@@ -1,0 +1,1145 @@
+[2026-03-21 17:02:23.819] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 17:02:23.820] [INFO] [src/main.cpp:50]   Day15: Signal Handling
+[2026-03-21 17:02:23.820] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 17:02:23.820] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 17:02:23.820] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 17:02:23.820] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 17:02:23.820] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 17:02:23.820] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 17:02:23.820] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 17:02:23.820] [INFO] [src/main.cpp:58] Log level: INFO
+[2026-03-21 17:02:23.820] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 17:02:23.820] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 17:02:23.820] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 17:02:23.820] [INFO] [src/main.cpp:65]   ThreadPool Demo
+[2026-03-21 17:02:23.820] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 17:02:23.820] [INFO] [src/thread/ThreadPool.cpp:38] Started 4 worker threads
+[2026-03-21 17:02:23.820] [INFO] [src/main.cpp:71] Submitting demo tasks to ThreadPool...
+[2026-03-21 17:02:23.821] [INFO] [src/main.cpp:74] Worker 0 executing...
+[2026-03-21 17:02:23.821] [INFO] [src/main.cpp:74] Worker 1 executing...
+[2026-03-21 17:02:23.821] [INFO] [src/main.cpp:74] Worker 2 executing...
+[2026-03-21 17:02:23.927] [INFO] [src/main.cpp:81] Demo tasks completed: 3 executed
+[2026-03-21 17:02:23.929] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 17:02:23.929] [INFO] [src/main.cpp:85] ========================================
+[2026-03-21 17:02:23.929] [INFO] [src/main.cpp:86]   ReactorPool (Network I/O + Signal)
+[2026-03-21 17:02:23.929] [INFO] [src/main.cpp:87] ========================================
+[2026-03-21 17:02:23.929] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 17:02:23.930] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 17:02:23.930] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 17:02:23.930] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 17:02:23.930] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 17:02:23.930] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 17:02:35.506] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 17:02:35.506] [INFO] [src/main.cpp:92] Signal shutdown callback triggered
+[2026-03-21 17:02:35.506] [INFO] [src/thread/ThreadPool.cpp:92] All workers stopped
+[2026-03-21 17:02:35.506] [INFO] [src/main.cpp:106] signalHandler wait done
+[2026-03-21 17:02:35.525] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 17:02:35.539] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 17:02:35.671] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 17:02:36.500] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 17:04:49.994] [INFO] [src/signal/SignalHandler.cpp:129] Received SIGHUP, reloading configuration...
+[2026-03-21 17:04:49.994] [INFO] [src/main.cpp:98] Configuration reload requested
+[2026-03-21 17:04:49.995] [INFO] [src/signal/SignalHandler.cpp:129] Received SIGHUP, reloading configuration...
+[2026-03-21 17:04:49.995] [INFO] [src/main.cpp:98] Configuration reload requested
+[2026-03-21 17:06:18.689] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 17:06:18.689] [INFO] [src/main.cpp:50]   Day15: Signal Handling
+[2026-03-21 17:06:18.689] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 17:06:18.689] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 17:06:18.689] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 17:06:18.689] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 17:06:18.689] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 17:06:18.689] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 17:06:18.689] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 17:06:18.689] [INFO] [src/main.cpp:58] Log level: INFO
+[2026-03-21 17:06:18.689] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 17:06:18.689] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 17:06:18.689] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 17:06:18.689] [INFO] [src/main.cpp:65]   ThreadPool Demo
+[2026-03-21 17:06:18.689] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 17:06:18.690] [INFO] [src/thread/ThreadPool.cpp:38] Started 4 worker threads
+[2026-03-21 17:06:18.690] [INFO] [src/main.cpp:71] Submitting demo tasks to ThreadPool...
+[2026-03-21 17:06:18.690] [INFO] [src/main.cpp:74] Worker 0 executing...
+[2026-03-21 17:06:18.690] [INFO] [src/main.cpp:74] Worker 1 executing...
+[2026-03-21 17:06:18.690] [INFO] [src/main.cpp:74] Worker 2 executing...
+[2026-03-21 17:06:18.797] [INFO] [src/main.cpp:81] Demo tasks completed: 3 executed
+[2026-03-21 17:06:18.799] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 17:06:18.799] [INFO] [src/main.cpp:85] ========================================
+[2026-03-21 17:06:18.799] [INFO] [src/main.cpp:86]   ReactorPool (Network I/O + Signal)
+[2026-03-21 17:06:18.799] [INFO] [src/main.cpp:87] ========================================
+[2026-03-21 17:06:18.799] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 17:06:18.800] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 17:06:18.800] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 17:06:18.800] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 17:06:18.800] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 17:06:18.800] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 17:06:31.696] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 17:06:31.696] [INFO] [src/main.cpp:92] Signal shutdown callback triggered
+[2026-03-21 17:06:31.696] [INFO] [src/thread/ThreadPool.cpp:92] All workers stopped
+[2026-03-21 17:06:31.696] [INFO] [src/main.cpp:106] signalHandler wait done
+[2026-03-21 17:06:31.696] [INFO] [src/net/Server.cpp:87] Accepted client: 127.0.0.1:47442 (fd=10)
+[2026-03-21 17:06:31.696] [INFO] [src/net/Connection.cpp:96] Client disconnected: 127.0.0.1:47442
+[2026-03-21 17:06:31.697] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 17:06:31.884] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 17:06:31.909] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 17:06:31.950] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 17:06:45.749] [INFO] [src/signal/SignalHandler.cpp:129] Received SIGHUP, reloading configuration...
+[2026-03-21 17:06:45.749] [INFO] [src/main.cpp:98] Configuration reload requested
+[2026-03-21 17:06:45.750] [INFO] [src/signal/SignalHandler.cpp:129] Received SIGHUP, reloading configuration...
+[2026-03-21 17:06:45.750] [INFO] [src/main.cpp:98] Configuration reload requested
+[2026-03-21 17:12:08.492] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 17:12:08.493] [INFO] [src/main.cpp:50]   Day15: Signal Handling
+[2026-03-21 17:12:08.493] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 17:12:08.493] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 17:12:08.493] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 17:12:08.493] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 17:12:08.493] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 17:12:08.493] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 17:12:08.493] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 17:12:08.493] [INFO] [src/main.cpp:58] Log level: INFO
+[2026-03-21 17:12:08.493] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 17:12:08.493] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 17:12:08.495] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 17:12:08.495] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 17:12:08.495] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 17:12:08.495] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 17:12:08.495] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 17:12:08.495] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 17:12:08.496] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 17:12:08.496] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 17:12:08.496] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 17:12:08.496] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 17:12:49.593] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 17:12:49.593] [INFO] [src/main.cpp:71] Signal shutdown callback triggered
+[2026-03-21 17:12:49.593] [INFO] [src/main.cpp:73] Signal shutdown callback triggered end
+[2026-03-21 17:12:49.593] [INFO] [src/main.cpp:85] signalHandler wait done
+[2026-03-21 17:12:49.892] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 17:12:50.035] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 17:12:50.107] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 17:12:50.111] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 17:14:41.033] [INFO] [src/signal/SignalHandler.cpp:129] Received SIGHUP, reloading configuration...
+[2026-03-21 17:14:41.033] [INFO] [src/main.cpp:77] Configuration reload requested
+[2026-03-21 17:14:41.034] [INFO] [src/signal/SignalHandler.cpp:129] Received SIGHUP, reloading configuration...
+[2026-03-21 17:14:41.034] [INFO] [src/main.cpp:77] Configuration reload requested
+[2026-03-21 17:19:35.312] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 17:19:35.312] [INFO] [src/main.cpp:50]   Day15: Signal Handling
+[2026-03-21 17:19:35.312] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 17:19:35.312] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 17:19:35.312] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 17:19:35.312] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 17:19:35.312] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 17:19:35.312] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 17:19:35.312] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 17:19:35.312] [INFO] [src/main.cpp:58] Log level: INFO
+[2026-03-21 17:19:35.312] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 17:19:35.312] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 17:19:35.314] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 17:19:35.314] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 17:19:35.314] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 17:19:35.314] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 17:19:35.314] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 17:19:35.315] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 17:19:35.315] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 17:19:35.315] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 17:19:35.315] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 17:19:35.315] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 17:19:35.315] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 17:19:35.315] [INFO] [src/main.cpp:85] signalHandler wait done
+[2026-03-21 17:19:35.315] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 17:19:35.315] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 17:19:35.315] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 17:19:35.315] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 17:19:35.315] [INFO] [src/main.cpp:89] ========================================
+[2026-03-21 17:19:35.316] [INFO] [src/main.cpp:90]   Final Statistics
+[2026-03-21 17:19:35.316] [INFO] [src/main.cpp:91] Connections handled by ReactorPool: 0
+[2026-03-21 17:19:35.316] [INFO] [src/main.cpp:98] Server stopped gracefully
+[2026-03-21 17:20:24.843] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 17:20:24.844] [INFO] [src/main.cpp:50]   Day15: Signal Handling
+[2026-03-21 17:20:24.844] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 17:20:24.844] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 17:20:24.844] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 17:20:24.844] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 17:20:24.844] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 17:20:24.844] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 17:20:24.844] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 17:20:24.844] [INFO] [src/main.cpp:58] Log level: INFO
+[2026-03-21 17:20:24.844] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 17:20:24.844] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 17:20:24.845] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 17:20:24.845] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 17:20:24.845] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 17:20:24.845] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 17:20:24.845] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 17:20:24.845] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 17:20:24.845] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 17:20:24.845] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 17:20:24.846] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 17:20:24.846] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 17:20:24.846] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 17:20:24.846] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 17:20:24.846] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 17:20:24.846] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 17:20:26.121] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 17:20:26.121] [INFO] [src/main.cpp:71] Signal shutdown callback triggered
+[2026-03-21 17:20:26.121] [INFO] [src/main.cpp:73] Signal shutdown callback triggered end
+[2026-03-21 17:20:26.121] [INFO] [src/main.cpp:85] signalHandler wait done
+[2026-03-21 17:20:26.122] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 17:20:26.122] [INFO] [src/main.cpp:89] ========================================
+[2026-03-21 17:20:26.122] [INFO] [src/main.cpp:90]   Final Statistics
+[2026-03-21 17:20:26.122] [INFO] [src/main.cpp:91] Connections handled by ReactorPool: 0
+[2026-03-21 17:20:26.122] [INFO] [src/main.cpp:98] Server stopped gracefully
+[2026-03-21 17:21:07.034] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 17:21:07.034] [INFO] [src/main.cpp:50]   Day15: Signal Handling
+[2026-03-21 17:21:07.034] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 17:21:07.034] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 17:21:07.034] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 17:21:07.034] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 17:21:07.034] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 17:21:07.034] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 17:21:07.034] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 17:21:07.034] [INFO] [src/main.cpp:58] Log level: INFO
+[2026-03-21 17:21:07.034] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 17:21:07.034] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 17:21:07.036] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 17:21:07.036] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 17:21:07.036] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 17:21:07.036] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 17:21:07.036] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 17:21:07.037] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 17:21:07.037] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 17:21:07.037] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 17:21:07.037] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 17:21:07.037] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 17:21:07.037] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 17:21:07.037] [INFO] [src/main.cpp:85] signalHandler wait done
+[2026-03-21 17:21:07.037] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 17:21:07.037] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 17:21:07.037] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 17:21:07.037] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 17:21:07.037] [INFO] [src/main.cpp:89] ========================================
+[2026-03-21 17:21:07.037] [INFO] [src/main.cpp:90]   Final Statistics
+[2026-03-21 17:21:07.037] [INFO] [src/main.cpp:91] Connections handled by ReactorPool: 0
+[2026-03-21 17:21:07.037] [INFO] [src/main.cpp:98] Server stopped gracefully
+[2026-03-21 17:23:22.915] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 17:23:22.916] [INFO] [src/main.cpp:50]   Day15: Signal Handling
+[2026-03-21 17:23:22.916] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 17:23:22.916] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 17:23:22.916] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 17:23:22.916] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 17:23:22.916] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 17:23:22.916] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 17:23:22.916] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 17:23:22.916] [INFO] [src/main.cpp:58] Log level: INFO
+[2026-03-21 17:23:22.916] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 17:23:22.916] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 17:23:22.918] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 17:23:22.918] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 17:23:22.918] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 17:23:22.918] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 17:23:22.918] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 17:23:22.918] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 17:23:22.918] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 17:23:22.918] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 17:23:22.918] [INFO] [src/main.cpp:85] signalHandler wait done
+[2026-03-21 17:23:22.918] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 17:23:22.918] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 17:23:31.477] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 17:23:31.478] [INFO] [src/main.cpp:71] Signal shutdown callback triggered
+[2026-03-21 17:23:31.478] [INFO] [src/main.cpp:73] Signal shutdown callback triggered end
+[2026-03-21 17:23:31.970] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 17:23:32.000] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 17:23:32.002] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 17:23:32.013] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 17:23:32.013] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 17:23:32.013] [INFO] [src/main.cpp:89] ========================================
+[2026-03-21 17:23:32.013] [INFO] [src/main.cpp:90]   Final Statistics
+[2026-03-21 17:23:32.013] [INFO] [src/main.cpp:91] Connections handled by ReactorPool: 0
+[2026-03-21 17:23:32.013] [INFO] [src/main.cpp:98] Server stopped gracefully
+[2026-03-21 17:23:53.611] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 17:23:53.611] [INFO] [src/main.cpp:50]   Day15: Signal Handling
+[2026-03-21 17:23:53.611] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 17:23:53.612] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 17:23:53.612] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 17:23:53.612] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 17:23:53.612] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 17:23:53.612] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 17:23:53.612] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 17:23:53.612] [INFO] [src/main.cpp:58] Log level: INFO
+[2026-03-21 17:23:53.612] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 17:23:53.612] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 17:23:53.614] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 17:23:53.614] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 17:23:53.614] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 17:23:53.614] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 17:23:53.614] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 17:23:53.614] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 17:23:53.614] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 17:23:53.614] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 17:23:53.614] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 17:23:53.614] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 17:23:53.614] [INFO] [src/main.cpp:85] signalHandler wait done
+[2026-03-21 17:23:56.824] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 17:23:56.824] [INFO] [src/main.cpp:71] Signal shutdown callback triggered
+[2026-03-21 17:23:56.824] [INFO] [src/main.cpp:73] Signal shutdown callback triggered end
+[2026-03-21 17:23:57.624] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 17:23:57.637] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 17:23:57.641] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 17:23:57.683] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 17:23:57.684] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 17:23:57.684] [INFO] [src/main.cpp:89] ========================================
+[2026-03-21 17:23:57.684] [INFO] [src/main.cpp:90]   Final Statistics
+[2026-03-21 17:23:57.684] [INFO] [src/main.cpp:91] Connections handled by ReactorPool: 0
+[2026-03-21 17:23:57.684] [INFO] [src/main.cpp:98] Server stopped gracefully
+[2026-03-21 17:53:05.432] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 17:53:05.432] [INFO] [src/main.cpp:50]   Day16: Network Options
+[2026-03-21 17:53:05.432] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 17:53:05.432] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 17:53:05.432] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 17:53:05.432] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 17:53:05.433] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 17:53:05.433] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 17:53:05.433] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 17:53:05.433] [INFO] [src/main.cpp:58] Log level: INFO
+[2026-03-21 17:53:05.433] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 17:53:05.433] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 17:53:05.435] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 17:53:05.435] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 17:53:05.435] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 17:53:05.435] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 17:53:05.435] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 17:53:05.435] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 17:53:05.435] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 17:53:05.435] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 17:53:05.436] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 17:53:05.436] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 17:53:05.436] [INFO] [src/main.cpp:83] signalHandler wait done
+[2026-03-21 17:53:08.437] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 17:53:08.437] [INFO] [src/main.cpp:71] Signal shutdown callback triggered
+[2026-03-21 17:53:08.437] [INFO] [src/main.cpp:73] Signal shutdown callback triggered end
+[2026-03-21 17:53:08.441] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 17:53:08.443] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 17:53:08.445] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 17:53:08.478] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 17:53:08.479] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 17:53:08.479] [INFO] [src/main.cpp:87] ========================================
+[2026-03-21 17:53:08.479] [INFO] [src/main.cpp:88]   Final Statistics
+[2026-03-21 17:53:08.479] [INFO] [src/main.cpp:89] Connections handled by ReactorPool: 0
+[2026-03-21 17:53:08.479] [INFO] [src/main.cpp:96] Server stopped gracefully
+[2026-03-21 17:53:36.358] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 17:53:36.358] [INFO] [src/main.cpp:50]   Day16: Network Options
+[2026-03-21 17:53:36.358] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 17:53:36.358] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 17:53:36.358] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 17:53:36.358] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 17:53:36.358] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 17:53:36.358] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 17:53:36.358] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 17:53:36.358] [INFO] [src/main.cpp:58] Log level: INFO
+[2026-03-21 17:53:36.358] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 17:53:36.358] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 17:53:36.360] [INFO] [src/net/Server.cpp:67] Server socket options: REUSEADDR=on, REUSEPORT=off, NONBLOCK=on
+[2026-03-21 17:53:36.360] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 17:53:36.360] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 17:53:36.360] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 17:53:36.360] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 17:53:36.360] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 17:53:36.361] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 17:53:36.361] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 17:53:36.361] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 17:53:36.361] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 17:53:36.361] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 17:53:36.361] [INFO] [src/main.cpp:83] signalHandler wait done
+[2026-03-21 17:53:39.368] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 17:53:39.368] [INFO] [src/main.cpp:71] Signal shutdown callback triggered
+[2026-03-21 17:53:39.368] [INFO] [src/main.cpp:73] Signal shutdown callback triggered end
+[2026-03-21 17:53:39.369] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 17:53:39.369] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 17:53:39.369] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 17:53:40.371] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 17:53:40.371] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 17:53:40.371] [INFO] [src/main.cpp:87] ========================================
+[2026-03-21 17:53:40.371] [INFO] [src/main.cpp:88]   Final Statistics
+[2026-03-21 17:53:40.371] [INFO] [src/main.cpp:89] Connections handled by ReactorPool: 0
+[2026-03-21 17:53:40.371] [INFO] [src/main.cpp:96] Server stopped gracefully
+[2026-03-21 17:57:42.651] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 17:57:42.651] [INFO] [src/main.cpp:50]   Day16: Network Options
+[2026-03-21 17:57:42.651] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 17:57:42.651] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 17:57:42.651] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 17:57:42.651] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 17:57:42.651] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 17:57:42.651] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 17:57:42.651] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 17:57:42.651] [INFO] [src/main.cpp:58] Log level: INFO
+[2026-03-21 17:57:42.651] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 17:57:42.651] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 17:57:42.653] [INFO] [src/net/Server.cpp:67] Server socket options: REUSEADDR=on, REUSEPORT=off, NONBLOCK=on
+[2026-03-21 17:57:42.653] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 17:57:42.653] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 17:57:42.653] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 17:57:42.653] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 17:57:42.653] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 17:57:42.654] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 17:57:42.654] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 17:57:42.654] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 17:57:42.654] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 17:57:42.654] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 17:57:42.654] [INFO] [src/main.cpp:83] signalHandler wait done
+[2026-03-21 17:57:48.102] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:46920 (fd=10)
+[2026-03-21 17:57:48.969] [INFO] [src/net/Connection.cpp:100] Client disconnected: 127.0.0.1:46920
+[2026-03-21 17:57:50.091] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:46922 (fd=10)
+[2026-03-21 17:57:53.318] [INFO] [src/net/Connection.cpp:100] Client disconnected: 127.0.0.1:46922
+[2026-03-21 17:57:57.018] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 17:57:57.018] [INFO] [src/main.cpp:71] Signal shutdown callback triggered
+[2026-03-21 17:57:57.018] [INFO] [src/main.cpp:73] Signal shutdown callback triggered end
+[2026-03-21 17:57:57.046] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 17:57:57.360] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 17:57:57.739] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 17:57:57.742] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 17:57:57.742] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 17:57:57.742] [INFO] [src/main.cpp:87] ========================================
+[2026-03-21 17:57:57.742] [INFO] [src/main.cpp:88]   Final Statistics
+[2026-03-21 17:57:57.742] [INFO] [src/main.cpp:89] Connections handled by ReactorPool: 2
+[2026-03-21 17:57:57.743] [INFO] [src/main.cpp:96] Server stopped gracefully
+[2026-03-21 18:05:36.656] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 18:05:36.656] [INFO] [src/main.cpp:50]   Day17: HTTP Protocol Parsing
+[2026-03-21 18:05:36.656] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 18:05:36.656] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 18:05:36.656] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 18:05:36.656] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 18:05:36.656] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 18:05:36.656] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 18:05:36.656] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 18:05:36.656] [INFO] [src/main.cpp:58] Log level: INFO
+[2026-03-21 18:05:36.656] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 18:05:36.656] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 18:05:36.658] [INFO] [src/net/Server.cpp:67] Server socket options: REUSEADDR=on, REUSEPORT=off, NONBLOCK=on
+[2026-03-21 18:05:36.658] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 18:05:36.658] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 18:05:36.658] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 18:05:36.658] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 18:05:36.658] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 18:05:36.658] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 18:05:36.658] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 18:05:36.659] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 18:05:36.658] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 18:05:36.659] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 18:05:36.659] [INFO] [src/main.cpp:83] signalHandler wait done
+[2026-03-21 18:05:58.823] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:46476 (fd=10)
+[2026-03-21 18:06:26.345] [WARN] [src/reactor/ConnectionManager.cpp:123] Connection timeout: 127.0.0.1:46476 (total timeouts: 1)
+[2026-03-21 18:06:52.780] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 18:06:52.780] [INFO] [src/main.cpp:71] Signal shutdown callback triggered
+[2026-03-21 18:06:52.780] [INFO] [src/main.cpp:73] Signal shutdown callback triggered end
+[2026-03-21 18:06:53.103] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 18:06:53.197] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 18:06:53.202] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 18:06:53.483] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 18:06:53.484] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 18:06:53.484] [INFO] [src/main.cpp:87] ========================================
+[2026-03-21 18:06:53.484] [INFO] [src/main.cpp:88]   Final Statistics
+[2026-03-21 18:06:53.484] [INFO] [src/main.cpp:89] Connections handled by ReactorPool: 1
+[2026-03-21 18:06:53.484] [INFO] [src/main.cpp:96] Server stopped gracefully
+[2026-03-21 18:26:38.099] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 18:26:38.100] [INFO] [src/main.cpp:50]   Day17: HTTP Protocol Parsing
+[2026-03-21 18:26:38.100] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 18:26:38.100] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 18:26:38.100] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 18:26:38.100] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 18:26:38.100] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 18:26:38.100] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 18:26:38.100] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 18:26:38.100] [INFO] [src/main.cpp:58] Log level: INFO
+[2026-03-21 18:26:38.100] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 18:26:38.100] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 18:26:38.102] [INFO] [src/net/Server.cpp:67] Server socket options: REUSEADDR=on, REUSEPORT=off, NONBLOCK=on
+[2026-03-21 18:26:38.102] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 18:26:38.102] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 18:26:38.102] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 18:26:38.102] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 18:26:38.102] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 18:26:38.102] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 18:26:38.102] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 18:26:38.102] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 18:26:38.102] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 18:26:38.103] [INFO] [src/main.cpp:83] signalHandler wait done
+[2026-03-21 18:26:38.103] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 18:26:40.868] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:48600 (fd=10)
+[2026-03-21 18:26:45.222] [INFO] [src/net/Connection.cpp:102] Client disconnected: 127.0.0.1:48600
+[2026-03-21 18:27:09.099] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:45972 (fd=10)
+[2026-03-21 18:27:09.099] [INFO] [src/net/Connection.cpp:132] HTTP POST / from 127.0.0.1:45972
+[2026-03-21 18:27:09.100] [INFO] [src/net/Connection.cpp:102] Client disconnected: 127.0.0.1:45972
+[2026-03-21 18:27:32.851] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:54818 (fd=10)
+[2026-03-21 18:27:32.851] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:59781 (fd=11)
+[2026-03-21 18:27:33.119] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:62266 (fd=12)
+[2026-03-21 18:28:03.855] [WARN] [src/reactor/ConnectionManager.cpp:123] Connection timeout: 127.0.0.1:59781 (total timeouts: 1)
+[2026-03-21 18:28:03.857] [WARN] [src/reactor/ConnectionManager.cpp:123] Connection timeout: 127.0.0.1:54818 (total timeouts: 1)
+[2026-03-21 18:28:04.127] [WARN] [src/reactor/ConnectionManager.cpp:123] Connection timeout: 127.0.0.1:62266 (total timeouts: 1)
+[2026-03-21 18:28:05.303] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:56066 (fd=10)
+[2026-03-21 18:28:05.303] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:63410 (fd=11)
+[2026-03-21 18:28:05.593] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:55314 (fd=12)
+[2026-03-21 18:49:27.605] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 18:49:27.605] [INFO] [src/main.cpp:50]   Day17: HTTP Protocol Parsing
+[2026-03-21 18:49:27.605] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 18:49:27.605] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 18:49:27.605] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 18:49:27.605] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 18:49:27.605] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 18:49:27.605] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 18:49:27.605] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 18:49:27.605] [INFO] [src/main.cpp:58] Log level: INFO
+[2026-03-21 18:49:27.605] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 18:49:27.605] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 18:49:27.607] [INFO] [src/net/Server.cpp:67] Server socket options: REUSEADDR=on, REUSEPORT=off, NONBLOCK=on
+[2026-03-21 18:49:27.607] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 18:49:27.607] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 18:49:27.607] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 18:49:27.607] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 18:49:27.607] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 18:49:27.607] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 18:49:27.607] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 18:49:27.607] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 18:49:27.607] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 18:49:27.607] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 18:49:27.607] [INFO] [src/main.cpp:83] signalHandler wait done
+[2026-03-21 18:49:32.449] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:47988 (fd=10)
+[2026-03-21 18:49:38.718] [INFO] [src/net/Connection.cpp:102] Client disconnected: 127.0.0.1:47988
+[2026-03-21 18:49:42.939] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 18:49:42.939] [INFO] [src/main.cpp:71] Signal shutdown callback triggered
+[2026-03-21 18:49:42.939] [INFO] [src/main.cpp:73] Signal shutdown callback triggered end
+[2026-03-21 18:49:42.970] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 18:49:43.764] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 18:49:43.778] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 18:49:43.809] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 18:49:43.809] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 18:49:43.809] [INFO] [src/main.cpp:87] ========================================
+[2026-03-21 18:49:43.809] [INFO] [src/main.cpp:88]   Final Statistics
+[2026-03-21 18:49:43.809] [INFO] [src/main.cpp:89] Connections handled by ReactorPool: 1
+[2026-03-21 18:49:43.809] [INFO] [src/main.cpp:96] Server stopped gracefully
+[2026-03-21 18:50:07.742] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 18:50:07.742] [INFO] [src/main.cpp:50]   Day17: HTTP Protocol Parsing
+[2026-03-21 18:50:07.742] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 18:50:07.742] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 18:50:07.743] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 18:50:07.743] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 18:50:07.743] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 18:50:07.743] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 18:50:07.743] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 18:50:07.743] [INFO] [src/main.cpp:58] Log level: INFO
+[2026-03-21 18:50:07.743] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 18:50:07.743] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 18:50:07.745] [INFO] [src/net/Server.cpp:67] Server socket options: REUSEADDR=on, REUSEPORT=off, NONBLOCK=on
+[2026-03-21 18:50:07.745] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 18:50:07.745] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 18:50:07.745] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 18:50:07.745] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 18:50:07.745] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 18:50:07.745] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 18:50:07.745] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 18:50:07.745] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 18:50:07.745] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 18:50:07.746] [INFO] [src/main.cpp:83] signalHandler wait done
+[2026-03-21 18:50:07.746] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 18:50:12.412] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:44716 (fd=10)
+[2026-03-21 18:50:12.412] [INFO] [src/http/HttpParser.cpp:35] [HttpParser] m_state: 
+[2026-03-21 18:50:12.412] [INFO] [src/http/HttpParser.cpp:35] [HttpParser] m_state: 
+[2026-03-21 18:50:18.004] [INFO] [src/net/Connection.cpp:102] Client disconnected: 127.0.0.1:44716
+[2026-03-21 18:50:19.184] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 18:50:19.184] [INFO] [src/main.cpp:71] Signal shutdown callback triggered
+[2026-03-21 18:50:19.184] [INFO] [src/main.cpp:73] Signal shutdown callback triggered end
+[2026-03-21 18:50:19.809] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 18:50:19.869] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 18:50:19.927] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 18:50:18.181] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 18:50:18.182] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 18:50:18.182] [INFO] [src/main.cpp:87] ========================================
+[2026-03-21 18:50:18.182] [INFO] [src/main.cpp:88]   Final Statistics
+[2026-03-21 18:50:18.182] [INFO] [src/main.cpp:89] Connections handled by ReactorPool: 1
+[2026-03-21 18:50:18.182] [INFO] [src/main.cpp:96] Server stopped gracefully
+[2026-03-21 18:50:43.722] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 18:50:43.722] [INFO] [src/main.cpp:50]   Day17: HTTP Protocol Parsing
+[2026-03-21 18:50:43.722] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 18:50:43.722] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 18:50:43.722] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 18:50:43.722] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 18:50:43.722] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 18:50:43.722] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 18:50:43.722] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 18:50:43.722] [INFO] [src/main.cpp:58] Log level: INFO
+[2026-03-21 18:50:43.722] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 18:50:43.722] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 18:50:43.724] [INFO] [src/net/Server.cpp:67] Server socket options: REUSEADDR=on, REUSEPORT=off, NONBLOCK=on
+[2026-03-21 18:50:43.724] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 18:50:43.724] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 18:50:43.724] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 18:50:43.724] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 18:50:43.724] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 18:50:43.724] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 18:50:43.724] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 18:50:43.724] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 18:50:43.724] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 18:50:43.724] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 18:50:43.724] [INFO] [src/main.cpp:83] signalHandler wait done
+[2026-03-21 18:50:59.442] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:44886 (fd=10)
+[2026-03-21 18:50:59.443] [INFO] [src/http/HttpParser.cpp:35] [HttpParser] m_state: 1
+[2026-03-21 18:50:59.443] [INFO] [src/http/HttpParser.cpp:35] [HttpParser] m_state: 2
+[2026-03-21 18:51:02.461] [INFO] [src/net/Connection.cpp:102] Client disconnected: 127.0.0.1:44886
+[2026-03-21 18:51:03.596] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 18:51:03.596] [INFO] [src/main.cpp:71] Signal shutdown callback triggered
+[2026-03-21 18:51:03.596] [INFO] [src/main.cpp:73] Signal shutdown callback triggered end
+[2026-03-21 18:51:03.799] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 18:51:03.853] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 18:51:03.905] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 18:51:04.465] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 18:51:04.466] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 18:51:04.466] [INFO] [src/main.cpp:87] ========================================
+[2026-03-21 18:51:04.466] [INFO] [src/main.cpp:88]   Final Statistics
+[2026-03-21 18:51:04.466] [INFO] [src/main.cpp:89] Connections handled by ReactorPool: 1
+[2026-03-21 18:51:04.466] [INFO] [src/main.cpp:96] Server stopped gracefully
+[2026-03-21 18:51:50.567] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 18:51:50.567] [INFO] [src/main.cpp:50]   Day17: HTTP Protocol Parsing
+[2026-03-21 18:51:50.568] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 18:51:50.568] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 18:51:50.568] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 18:51:50.568] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 18:51:50.568] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 18:51:50.568] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 18:51:50.568] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 18:51:50.568] [INFO] [src/main.cpp:58] Log level: INFO
+[2026-03-21 18:51:50.568] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 18:51:50.568] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 18:51:50.569] [INFO] [src/net/Server.cpp:67] Server socket options: REUSEADDR=on, REUSEPORT=off, NONBLOCK=on
+[2026-03-21 18:51:50.569] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 18:51:50.569] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 18:51:50.569] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 18:51:50.570] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 18:51:50.570] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 18:51:50.570] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 18:51:50.570] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 18:51:50.570] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 18:51:50.570] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 18:51:50.570] [INFO] [src/main.cpp:83] signalHandler wait done
+[2026-03-21 18:51:50.570] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 18:51:53.347] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:48444 (fd=10)
+[2026-03-21 18:51:53.347] [INFO] [src/http/HttpParser.cpp:19] [HttpParser] m_state start: 0
+[2026-03-21 18:51:53.347] [INFO] [src/http/HttpParser.cpp:35] [HttpParser] m_state: 1
+[2026-03-21 18:51:53.347] [INFO] [src/http/HttpParser.cpp:19] [HttpParser] m_state start: 1
+[2026-03-21 18:51:53.347] [INFO] [src/http/HttpParser.cpp:35] [HttpParser] m_state: 2
+[2026-03-21 18:51:56.280] [INFO] [src/net/Connection.cpp:102] Client disconnected: 127.0.0.1:48444
+[2026-03-21 18:51:58.015] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 18:51:58.015] [INFO] [src/main.cpp:71] Signal shutdown callback triggered
+[2026-03-21 18:51:58.015] [INFO] [src/main.cpp:73] Signal shutdown callback triggered end
+[2026-03-21 18:51:58.304] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 18:51:58.611] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 18:51:58.615] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 18:51:58.631] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 18:51:58.631] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 18:51:58.631] [INFO] [src/main.cpp:87] ========================================
+[2026-03-21 18:51:58.631] [INFO] [src/main.cpp:88]   Final Statistics
+[2026-03-21 18:51:58.631] [INFO] [src/main.cpp:89] Connections handled by ReactorPool: 1
+[2026-03-21 18:51:58.631] [INFO] [src/main.cpp:96] Server stopped gracefully
+[2026-03-21 18:57:14.948] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 18:57:14.949] [INFO] [src/main.cpp:50]   Day17: HTTP Protocol Parsing
+[2026-03-21 18:57:14.949] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 18:57:14.949] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 18:57:14.949] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 18:57:14.949] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 18:57:14.949] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 18:57:14.949] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 18:57:14.949] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 18:57:14.949] [INFO] [src/main.cpp:58] Log level: INFO
+[2026-03-21 18:57:14.949] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 18:57:14.949] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 18:57:14.951] [INFO] [src/net/Server.cpp:67] Server socket options: REUSEADDR=on, REUSEPORT=off, NONBLOCK=on
+[2026-03-21 18:57:14.951] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 18:57:14.951] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 18:57:14.951] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 18:57:14.951] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 18:57:14.951] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 18:57:14.951] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 18:57:14.951] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 18:57:14.952] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 18:57:14.952] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 18:57:14.952] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 18:57:14.952] [INFO] [src/main.cpp:83] signalHandler wait done
+[2026-03-21 18:57:18.569] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:47570 (fd=10)
+[2026-03-21 18:57:19.408] [INFO] [src/net/Connection.cpp:102] Client disconnected: 127.0.0.1:47570
+[2026-03-21 18:57:20.800] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 18:57:20.800] [INFO] [src/main.cpp:71] Signal shutdown callback triggered
+[2026-03-21 18:57:20.800] [INFO] [src/main.cpp:73] Signal shutdown callback triggered end
+[2026-03-21 18:57:20.968] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 18:57:20.987] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 18:57:21.068] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 18:57:21.457] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 18:57:21.457] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 18:57:21.457] [INFO] [src/main.cpp:87] ========================================
+[2026-03-21 18:57:21.457] [INFO] [src/main.cpp:88]   Final Statistics
+[2026-03-21 18:57:21.457] [INFO] [src/main.cpp:89] Connections handled by ReactorPool: 1
+[2026-03-21 18:57:21.457] [INFO] [src/main.cpp:96] Server stopped gracefully
+[2026-03-21 19:04:21.144] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 19:04:21.144] [INFO] [src/main.cpp:50]   Day17: HTTP Protocol Parsing
+[2026-03-21 19:04:21.144] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 19:04:21.144] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 19:04:21.144] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 19:04:21.144] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 19:04:21.144] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 19:04:21.144] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 19:04:21.144] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 19:04:21.144] [INFO] [src/main.cpp:58] Log level: INFO
+[2026-03-21 19:04:21.144] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 19:04:21.144] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 19:04:21.146] [INFO] [src/net/Server.cpp:67] Server socket options: REUSEADDR=on, REUSEPORT=off, NONBLOCK=on
+[2026-03-21 19:04:21.146] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 19:04:21.146] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 19:04:21.146] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 19:04:21.146] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 19:04:21.146] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 19:04:21.147] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 19:04:21.147] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 19:04:21.147] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 19:04:21.148] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 19:04:21.148] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 19:04:21.148] [INFO] [src/main.cpp:83] signalHandler wait done
+[2026-03-21 19:04:29.360] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:45882 (fd=10)
+[2026-03-21 19:04:29.360] [INFO] [src/http/HttpParser.cpp:19] [HttpParser] m_state start: 0
+[2026-03-21 19:04:29.360] [INFO] [src/http/HttpParser.cpp:35] [HttpParser] m_state: 1
+[2026-03-21 19:04:29.360] [INFO] [src/http/HttpParser.cpp:19] [HttpParser] m_state start: 1
+[2026-03-21 19:04:29.360] [INFO] [src/http/HttpParser.cpp:35] [HttpParser] m_state: 2
+[2026-03-21 19:04:42.382] [INFO] [src/net/Connection.cpp:102] Client disconnected: 127.0.0.1:45882
+[2026-03-21 19:04:50.355] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:44870 (fd=10)
+[2026-03-21 19:04:50.355] [INFO] [src/http/HttpParser.cpp:19] [HttpParser] m_state start: 0
+[2026-03-21 19:04:50.355] [INFO] [src/http/HttpParser.cpp:35] [HttpParser] m_state: 1
+[2026-03-21 19:04:50.355] [INFO] [src/http/HttpParser.cpp:19] [HttpParser] m_state start: 1
+[2026-03-21 19:04:50.355] [INFO] [src/http/HttpParser.cpp:35] [HttpParser] m_state: 2
+[2026-03-21 19:04:56.798] [INFO] [src/net/Connection.cpp:102] Client disconnected: 127.0.0.1:44870
+[2026-03-21 19:05:32.196] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 19:05:32.196] [INFO] [src/main.cpp:50]   Day17: HTTP Protocol Parsing
+[2026-03-21 19:05:32.196] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 19:05:32.197] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 19:05:32.197] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 19:05:32.197] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 19:05:32.197] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 19:05:32.197] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 19:05:32.197] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 19:05:32.197] [INFO] [src/main.cpp:58] Log level: DEBUG
+[2026-03-21 19:05:32.197] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 19:05:32.197] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 19:05:32.199] [INFO] [src/net/Server.cpp:67] Server socket options: REUSEADDR=on, REUSEPORT=off, NONBLOCK=on
+[2026-03-21 19:05:32.199] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 19:05:32.199] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 19:05:32.199] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 19:05:32.199] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 19:05:32.199] [DEBUG] [src/signal/SignalHandler.cpp:180] Installed handlers for SIGINT, SIGTERM, SIGHUP, SIGPIPE
+[2026-03-21 19:05:32.199] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 19:05:32.199] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 19:05:32.199] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 19:05:32.200] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 19:05:32.200] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 19:05:32.200] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 19:05:32.200] [INFO] [src/main.cpp:83] signalHandler wait done
+[2026-03-21 19:05:35.135] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:48574 (fd=10)
+[2026-03-21 19:05:35.135] [DEBUG] [src/net/Server.cpp:110] -> Worker 0
+[2026-03-21 19:05:35.135] [DEBUG] [src/net/Connection.cpp:111] Worker 0 read 77 bytes from 127.0.0.1:48574
+[2026-03-21 19:05:39.003] [INFO] [src/net/Connection.cpp:102] Client disconnected: 127.0.0.1:48574
+[2026-03-21 19:05:39.003] [DEBUG] [src/net/Connection.cpp:205] Worker 0 closing: 127.0.0.1:48574
+[2026-03-21 19:05:39.003] [DEBUG] [src/reactor/Reactor.cpp:57] removeHandler: removing Connection fd=10, timerId=2
+[2026-03-21 19:10:11.596] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 19:10:11.597] [INFO] [src/main.cpp:50]   Day17: HTTP Protocol Parsing
+[2026-03-21 19:10:11.597] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 19:10:11.597] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 19:10:11.597] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 19:10:11.597] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 19:10:11.597] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 19:10:11.597] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 19:10:11.597] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 19:10:11.597] [INFO] [src/main.cpp:58] Log level: DEBUG
+[2026-03-21 19:10:11.597] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 19:10:11.597] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 19:10:11.599] [INFO] [src/net/Server.cpp:67] Server socket options: REUSEADDR=on, REUSEPORT=off, NONBLOCK=on
+[2026-03-21 19:10:11.599] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 19:10:11.599] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 19:10:11.599] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 19:10:11.599] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 19:10:11.599] [DEBUG] [src/signal/SignalHandler.cpp:180] Installed handlers for SIGINT, SIGTERM, SIGHUP, SIGPIPE
+[2026-03-21 19:10:11.599] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 19:10:11.599] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 19:10:11.599] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 19:10:11.599] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 19:10:11.599] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 19:10:11.599] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 19:10:11.600] [INFO] [src/main.cpp:83] signalHandler wait done
+[2026-03-21 19:10:14.775] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:46874 (fd=10)
+[2026-03-21 19:10:14.775] [DEBUG] [src/net/Server.cpp:110] -> Worker 0
+[2026-03-21 19:10:14.775] [DEBUG] [src/net/Connection.cpp:111] Worker 0 read 77 bytes from 127.0.0.1:46874
+[2026-03-21 19:10:17.912] [INFO] [src/net/Connection.cpp:102] Client disconnected: 127.0.0.1:46874
+[2026-03-21 19:10:17.912] [DEBUG] [src/net/Connection.cpp:205] Worker 0 closing: 127.0.0.1:46874
+[2026-03-21 19:10:17.912] [DEBUG] [src/reactor/Reactor.cpp:57] removeHandler: removing Connection fd=10, timerId=2
+[2026-03-21 19:10:18.299] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:48648 (fd=10)
+[2026-03-21 19:10:18.300] [DEBUG] [src/net/Server.cpp:110] -> Worker 1
+[2026-03-21 19:10:18.300] [DEBUG] [src/net/Connection.cpp:111] Worker 1 read 77 bytes from 127.0.0.1:48648
+[2026-03-21 19:10:19.272] [INFO] [src/net/Connection.cpp:102] Client disconnected: 127.0.0.1:48648
+[2026-03-21 19:10:19.272] [DEBUG] [src/net/Connection.cpp:205] Worker 1 closing: 127.0.0.1:48648
+[2026-03-21 19:10:19.272] [DEBUG] [src/reactor/Reactor.cpp:57] removeHandler: removing Connection fd=10, timerId=2
+[2026-03-21 19:10:21.274] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 19:10:21.274] [INFO] [src/main.cpp:71] Signal shutdown callback triggered
+[2026-03-21 19:10:21.274] [INFO] [src/main.cpp:73] Signal shutdown callback triggered end
+[2026-03-21 19:10:21.274] [DEBUG] [src/net/Server.cpp:127] handleClose 5
+[2026-03-21 19:10:21.407] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 1...
+[2026-03-21 19:10:21.407] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 19:10:21.590] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 3...
+[2026-03-21 19:10:21.591] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 19:10:21.838] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 2...
+[2026-03-21 19:10:21.838] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 19:10:21.889] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 0...
+[2026-03-21 19:10:21.889] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 19:10:21.889] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 19:10:21.889] [INFO] [src/main.cpp:87] ========================================
+[2026-03-21 19:10:21.889] [INFO] [src/main.cpp:88]   Final Statistics
+[2026-03-21 19:10:21.889] [INFO] [src/main.cpp:89] Connections handled by ReactorPool: 2
+[2026-03-21 19:10:21.889] [INFO] [src/main.cpp:96] Server stopped gracefully
+[2026-03-21 19:11:28.320] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 19:11:28.320] [INFO] [src/main.cpp:50]   Day17: HTTP Protocol Parsing
+[2026-03-21 19:11:28.320] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 19:11:28.320] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 19:11:28.320] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 19:11:28.320] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 19:11:28.320] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 19:11:28.320] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 19:11:28.320] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 19:11:28.320] [INFO] [src/main.cpp:58] Log level: DEBUG
+[2026-03-21 19:11:28.320] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 19:11:28.320] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 19:11:28.322] [INFO] [src/net/Server.cpp:67] Server socket options: REUSEADDR=on, REUSEPORT=off, NONBLOCK=on
+[2026-03-21 19:11:28.322] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 19:11:28.322] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 19:11:28.322] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 19:11:28.322] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 19:11:28.322] [DEBUG] [src/signal/SignalHandler.cpp:180] Installed handlers for SIGINT, SIGTERM, SIGHUP, SIGPIPE
+[2026-03-21 19:11:28.322] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 19:11:28.323] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 19:11:28.323] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 19:11:28.323] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 19:11:28.323] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 19:11:28.323] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 19:11:28.323] [INFO] [src/main.cpp:83] signalHandler wait done
+[2026-03-21 19:25:06.522] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 19:25:06.522] [INFO] [src/main.cpp:50]   Day17: HTTP Protocol Parsing
+[2026-03-21 19:25:06.522] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 19:25:06.522] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 19:25:06.522] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 19:25:06.522] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 19:25:06.522] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 19:25:06.522] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 19:25:06.522] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 19:25:06.522] [INFO] [src/main.cpp:58] Log level: DEBUG
+[2026-03-21 19:25:06.522] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 19:25:06.522] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 19:25:06.524] [INFO] [src/net/Server.cpp:67] Server socket options: REUSEADDR=on, REUSEPORT=off, NONBLOCK=on
+[2026-03-21 19:25:06.524] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 19:25:06.524] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 19:25:06.524] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 19:25:06.524] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 19:25:06.524] [DEBUG] [src/signal/SignalHandler.cpp:180] Installed handlers for SIGINT, SIGTERM, SIGHUP, SIGPIPE
+[2026-03-21 19:25:06.525] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 19:25:06.525] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 19:25:06.525] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 19:25:06.525] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 19:25:06.525] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 19:25:06.525] [INFO] [src/main.cpp:83] signalHandler wait done
+[2026-03-21 19:25:06.525] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 19:25:13.571] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:45116 (fd=10)
+[2026-03-21 19:25:13.571] [DEBUG] [src/net/Server.cpp:110] -> Worker 0
+[2026-03-21 19:25:13.571] [DEBUG] [src/net/Connection.cpp:111] Worker 0 read 77 bytes from 127.0.0.1:45116
+[2026-03-21 19:25:13.571] [INFO] [src/net/Connection.cpp:132] HTTP GET / from 127.0.0.1:45116
+[2026-03-21 19:25:13.572] [INFO] [src/net/Connection.cpp:102] Client disconnected: 127.0.0.1:45116
+[2026-03-21 19:25:13.572] [DEBUG] [src/net/Connection.cpp:205] Worker 0 closing: 127.0.0.1:45116
+[2026-03-21 19:25:13.572] [DEBUG] [src/reactor/Reactor.cpp:57] removeHandler: removing Connection fd=10, timerId=3
+[2026-03-21 19:25:15.336] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:45120 (fd=10)
+[2026-03-21 19:25:15.336] [DEBUG] [src/net/Server.cpp:110] -> Worker 1
+[2026-03-21 19:25:15.336] [DEBUG] [src/net/Connection.cpp:111] Worker 1 read 77 bytes from 127.0.0.1:45120
+[2026-03-21 19:25:15.336] [INFO] [src/net/Connection.cpp:132] HTTP GET / from 127.0.0.1:45120
+[2026-03-21 19:25:15.337] [INFO] [src/net/Connection.cpp:102] Client disconnected: 127.0.0.1:45120
+[2026-03-21 19:25:15.337] [DEBUG] [src/net/Connection.cpp:205] Worker 1 closing: 127.0.0.1:45120
+[2026-03-21 19:25:15.337] [DEBUG] [src/reactor/Reactor.cpp:57] removeHandler: removing Connection fd=10, timerId=3
+[2026-03-21 19:26:40.764] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 19:26:40.765] [INFO] [src/main.cpp:71] Signal shutdown callback triggered
+[2026-03-21 19:26:40.765] [INFO] [src/main.cpp:73] Signal shutdown callback triggered end
+[2026-03-21 19:26:40.765] [DEBUG] [src/net/Server.cpp:127] handleClose 5
+[2026-03-21 19:26:40.974] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 1...
+[2026-03-21 19:26:40.975] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 19:26:41.019] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 0...
+[2026-03-21 19:26:41.019] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 19:26:41.023] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 2...
+[2026-03-21 19:26:41.023] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 19:26:41.214] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 3...
+[2026-03-21 19:26:41.214] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 19:26:41.214] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 19:26:41.214] [INFO] [src/main.cpp:87] ========================================
+[2026-03-21 19:26:41.215] [INFO] [src/main.cpp:88]   Final Statistics
+[2026-03-21 19:26:41.215] [INFO] [src/main.cpp:89] Connections handled by ReactorPool: 2
+[2026-03-21 19:26:41.215] [INFO] [src/main.cpp:96] Server stopped gracefully
+[2026-03-21 19:26:45.163] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 19:26:45.163] [INFO] [src/main.cpp:50]   Day17: HTTP Protocol Parsing
+[2026-03-21 19:26:45.163] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 19:26:45.163] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 19:26:45.163] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 19:26:45.163] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 19:26:45.163] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 19:26:45.163] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 19:26:45.163] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 19:26:45.164] [INFO] [src/main.cpp:58] Log level: DEBUG
+[2026-03-21 19:26:45.164] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 19:26:45.164] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 19:26:45.165] [INFO] [src/net/Server.cpp:67] Server socket options: REUSEADDR=on, REUSEPORT=off, NONBLOCK=on
+[2026-03-21 19:26:45.165] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 19:26:45.165] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 19:26:45.166] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 19:26:45.166] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 19:26:45.166] [DEBUG] [src/signal/SignalHandler.cpp:180] Installed handlers for SIGINT, SIGTERM, SIGHUP, SIGPIPE
+[2026-03-21 19:26:45.166] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 19:26:45.166] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 19:26:45.166] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 19:26:45.166] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 19:26:45.166] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 19:26:45.166] [INFO] [src/main.cpp:83] signalHandler wait done
+[2026-03-21 19:26:45.166] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 19:26:48.513] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:48662 (fd=10)
+[2026-03-21 19:26:48.514] [DEBUG] [src/net/Server.cpp:110] -> Worker 0
+[2026-03-21 19:26:48.514] [DEBUG] [src/net/Connection.cpp:111] Worker 0 read 77 bytes from 127.0.0.1:48662
+[2026-03-21 19:26:49.875] [INFO] [src/net/Connection.cpp:102] Client disconnected: 127.0.0.1:48662
+[2026-03-21 19:26:49.875] [DEBUG] [src/net/Connection.cpp:205] Worker 0 closing: 127.0.0.1:48662
+[2026-03-21 19:26:49.875] [DEBUG] [src/reactor/Reactor.cpp:57] removeHandler: removing Connection fd=10, timerId=2
+[2026-03-21 19:26:51.761] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 19:26:51.761] [INFO] [src/main.cpp:71] Signal shutdown callback triggered
+[2026-03-21 19:26:51.761] [INFO] [src/main.cpp:73] Signal shutdown callback triggered end
+[2026-03-21 19:26:51.761] [DEBUG] [src/net/Server.cpp:127] handleClose 5
+[2026-03-21 19:26:51.882] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 0...
+[2026-03-21 19:26:51.882] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 19:26:52.211] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 1...
+[2026-03-21 19:26:52.211] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 19:26:52.228] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 3...
+[2026-03-21 19:26:52.228] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 19:26:52.230] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 2...
+[2026-03-21 19:26:52.230] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 19:26:52.230] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 19:26:52.231] [INFO] [src/main.cpp:87] ========================================
+[2026-03-21 19:26:52.231] [INFO] [src/main.cpp:88]   Final Statistics
+[2026-03-21 19:26:52.231] [INFO] [src/main.cpp:89] Connections handled by ReactorPool: 1
+[2026-03-21 19:26:52.231] [INFO] [src/main.cpp:96] Server stopped gracefully
+[2026-03-21 19:28:07.490] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 19:28:07.490] [INFO] [src/main.cpp:50]   Day17: HTTP Protocol Parsing
+[2026-03-21 19:28:07.490] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 19:28:07.490] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 19:28:07.490] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 19:28:07.490] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 19:28:07.490] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 19:28:07.490] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 19:28:07.490] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 19:28:07.490] [INFO] [src/main.cpp:58] Log level: DEBUG
+[2026-03-21 19:28:07.490] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 19:28:07.490] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 19:28:07.492] [INFO] [src/net/Server.cpp:67] Server socket options: REUSEADDR=on, REUSEPORT=off, NONBLOCK=on
+[2026-03-21 19:28:07.492] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 19:28:07.492] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 19:28:07.492] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 19:28:07.492] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 19:28:07.492] [DEBUG] [src/signal/SignalHandler.cpp:180] Installed handlers for SIGINT, SIGTERM, SIGHUP, SIGPIPE
+[2026-03-21 19:28:07.492] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 19:28:07.492] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 19:28:07.492] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 19:28:07.492] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 19:28:07.493] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 19:28:07.493] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 19:28:07.493] [INFO] [src/main.cpp:83] signalHandler wait done
+[2026-03-21 19:28:10.878] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:48458 (fd=10)
+[2026-03-21 19:28:10.878] [DEBUG] [src/net/Server.cpp:110] -> Worker 0
+[2026-03-21 19:28:10.878] [DEBUG] [src/net/Connection.cpp:111] Worker 0 read 77 bytes from 127.0.0.1:48458
+[2026-03-21 19:28:10.878] [INFO] [src/net/Connection.cpp:132] HTTP GET / from 127.0.0.1:48458
+[2026-03-21 19:28:10.879] [INFO] [src/net/Connection.cpp:102] Client disconnected: 127.0.0.1:48458
+[2026-03-21 19:28:10.879] [DEBUG] [src/net/Connection.cpp:205] Worker 0 closing: 127.0.0.1:48458
+[2026-03-21 19:28:10.879] [DEBUG] [src/reactor/Reactor.cpp:57] removeHandler: removing Connection fd=10, timerId=3
+[2026-03-21 19:28:11.364] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 19:28:11.364] [INFO] [src/main.cpp:71] Signal shutdown callback triggered
+[2026-03-21 19:28:11.364] [INFO] [src/main.cpp:73] Signal shutdown callback triggered end
+[2026-03-21 19:28:11.364] [DEBUG] [src/net/Server.cpp:127] handleClose 5
+[2026-03-21 19:28:11.573] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 0...
+[2026-03-21 19:28:11.574] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 19:28:12.174] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 1...
+[2026-03-21 19:28:12.174] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 19:28:12.189] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 2...
+[2026-03-21 19:28:12.189] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 19:28:12.196] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 3...
+[2026-03-21 19:28:12.196] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 19:28:12.196] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 19:28:12.196] [INFO] [src/main.cpp:87] ========================================
+[2026-03-21 19:28:12.197] [INFO] [src/main.cpp:88]   Final Statistics
+[2026-03-21 19:28:12.197] [INFO] [src/main.cpp:89] Connections handled by ReactorPool: 1
+[2026-03-21 19:28:12.197] [INFO] [src/main.cpp:96] Server stopped gracefully
+[2026-03-21 19:43:23.830] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 19:43:23.830] [INFO] [src/main.cpp:50]   Day17: HTTP Protocol Parsing
+[2026-03-21 19:43:23.830] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 19:43:23.830] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 19:43:23.830] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 19:43:23.830] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 19:43:23.830] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 19:43:23.830] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 19:43:23.830] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 19:43:23.830] [INFO] [src/main.cpp:58] Log level: DEBUG
+[2026-03-21 19:43:23.830] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 19:43:23.830] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 19:43:23.833] [INFO] [src/net/Server.cpp:67] Server socket options: REUSEADDR=on, REUSEPORT=off, NONBLOCK=on
+[2026-03-21 19:43:23.833] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 19:43:23.833] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 19:43:23.833] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 19:43:23.833] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 19:43:23.833] [DEBUG] [src/signal/SignalHandler.cpp:180] Installed handlers for SIGINT, SIGTERM, SIGHUP, SIGPIPE
+[2026-03-21 19:43:23.833] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 19:43:23.833] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 19:43:23.833] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 19:43:23.833] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 19:43:23.833] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 19:43:23.833] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 19:43:23.834] [INFO] [src/main.cpp:83] signalHandler wait done
+[2026-03-21 19:43:28.627] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:46436 (fd=10)
+[2026-03-21 19:43:28.627] [DEBUG] [src/net/Server.cpp:110] -> Worker 0
+[2026-03-21 19:43:28.627] [DEBUG] [src/net/Connection.cpp:111] Worker 0 read 77 bytes from 127.0.0.1:46436
+[2026-03-21 19:43:28.627] [INFO] [src/net/Connection.cpp:132] HTTP GET / from 127.0.0.1:46436
+[2026-03-21 19:43:28.627] [INFO] [src/net/Connection.cpp:102] Client disconnected: 127.0.0.1:46436
+[2026-03-21 19:43:28.627] [DEBUG] [src/net/Connection.cpp:205] Worker 0 closing: 127.0.0.1:46436
+[2026-03-21 19:43:28.627] [DEBUG] [src/reactor/Reactor.cpp:57] removeHandler: removing Connection fd=10, timerId=3
+[2026-03-21 19:43:30.215] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:46452 (fd=10)
+[2026-03-21 19:43:30.215] [DEBUG] [src/net/Server.cpp:110] -> Worker 1
+[2026-03-21 19:43:30.215] [DEBUG] [src/net/Connection.cpp:111] Worker 1 read 77 bytes from 127.0.0.1:46452
+[2026-03-21 19:43:30.215] [INFO] [src/net/Connection.cpp:132] HTTP GET / from 127.0.0.1:46452
+[2026-03-21 19:43:30.216] [INFO] [src/net/Connection.cpp:102] Client disconnected: 127.0.0.1:46452
+[2026-03-21 19:43:30.216] [DEBUG] [src/net/Connection.cpp:205] Worker 1 closing: 127.0.0.1:46452
+[2026-03-21 19:43:30.216] [DEBUG] [src/reactor/Reactor.cpp:57] removeHandler: removing Connection fd=10, timerId=3
+[2026-03-21 19:43:30.976] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:46466 (fd=10)
+[2026-03-21 19:43:30.976] [DEBUG] [src/net/Server.cpp:110] -> Worker 2
+[2026-03-21 19:43:30.976] [DEBUG] [src/net/Connection.cpp:111] Worker 2 read 77 bytes from 127.0.0.1:46466
+[2026-03-21 19:43:30.976] [INFO] [src/net/Connection.cpp:132] HTTP GET / from 127.0.0.1:46466
+[2026-03-21 19:43:30.977] [INFO] [src/net/Connection.cpp:102] Client disconnected: 127.0.0.1:46466
+[2026-03-21 19:43:30.977] [DEBUG] [src/net/Connection.cpp:205] Worker 2 closing: 127.0.0.1:46466
+[2026-03-21 19:43:30.977] [DEBUG] [src/reactor/Reactor.cpp:57] removeHandler: removing Connection fd=10, timerId=3
+[2026-03-21 19:43:34.366] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 19:43:34.366] [INFO] [src/main.cpp:71] Signal shutdown callback triggered
+[2026-03-21 19:43:34.366] [INFO] [src/main.cpp:73] Signal shutdown callback triggered end
+[2026-03-21 19:43:34.366] [DEBUG] [src/net/Server.cpp:127] handleClose 5
+[2026-03-21 19:43:34.686] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 0...
+[2026-03-21 19:43:34.686] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 19:43:34.956] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 3...
+[2026-03-21 19:43:34.956] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 19:43:34.992] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 2...
+[2026-03-21 19:43:34.992] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 19:43:35.255] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 1...
+[2026-03-21 19:43:35.255] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 19:43:35.255] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 19:43:35.255] [INFO] [src/main.cpp:87] ========================================
+[2026-03-21 19:43:35.255] [INFO] [src/main.cpp:88]   Final Statistics
+[2026-03-21 19:43:35.255] [INFO] [src/main.cpp:89] Connections handled by ReactorPool: 3
+[2026-03-21 19:43:35.256] [INFO] [src/main.cpp:96] Server stopped gracefully
+[2026-03-21 19:43:50.222] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 19:43:50.222] [INFO] [src/main.cpp:50]   Day17: HTTP Protocol Parsing
+[2026-03-21 19:43:50.222] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 19:43:50.222] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 19:43:50.222] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 19:43:50.222] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 19:43:50.222] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 19:43:50.222] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 19:43:50.222] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 19:43:50.222] [INFO] [src/main.cpp:58] Log level: DEBUG
+[2026-03-21 19:43:50.223] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 19:43:50.223] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 19:43:50.224] [INFO] [src/net/Server.cpp:67] Server socket options: REUSEADDR=on, REUSEPORT=off, NONBLOCK=on
+[2026-03-21 19:43:50.224] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 19:43:50.224] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 19:43:50.224] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 19:43:50.224] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 19:43:50.224] [DEBUG] [src/signal/SignalHandler.cpp:180] Installed handlers for SIGINT, SIGTERM, SIGHUP, SIGPIPE
+[2026-03-21 19:43:50.224] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 19:43:50.225] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 19:43:50.225] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 19:43:50.225] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 19:43:50.225] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 19:43:50.225] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 19:43:50.225] [INFO] [src/main.cpp:83] signalHandler wait done
+[2026-03-21 19:43:52.936] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:47630 (fd=10)
+[2026-03-21 19:43:52.936] [DEBUG] [src/net/Server.cpp:110] -> Worker 0
+[2026-03-21 19:43:52.936] [DEBUG] [src/net/Connection.cpp:111] Worker 0 read 77 bytes from 127.0.0.1:47630
+[2026-03-21 19:43:53.792] [INFO] [src/net/Connection.cpp:102] Client disconnected: 127.0.0.1:47630
+[2026-03-21 19:43:53.792] [DEBUG] [src/net/Connection.cpp:205] Worker 0 closing: 127.0.0.1:47630
+[2026-03-21 19:43:53.792] [DEBUG] [src/reactor/Reactor.cpp:57] removeHandler: removing Connection fd=10, timerId=2
+[2026-03-21 19:43:55.139] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 19:43:55.139] [INFO] [src/main.cpp:71] Signal shutdown callback triggered
+[2026-03-21 19:43:55.139] [INFO] [src/main.cpp:73] Signal shutdown callback triggered end
+[2026-03-21 19:43:55.139] [DEBUG] [src/net/Server.cpp:127] handleClose 5
+[2026-03-21 19:43:55.242] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 2...
+[2026-03-21 19:43:55.242] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 19:43:55.247] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 3...
+[2026-03-21 19:43:55.247] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 19:43:55.268] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 1...
+[2026-03-21 19:43:55.268] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 19:43:55.795] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 0...
+[2026-03-21 19:43:55.795] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 19:43:55.795] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 19:43:55.795] [INFO] [src/main.cpp:87] ========================================
+[2026-03-21 19:43:55.795] [INFO] [src/main.cpp:88]   Final Statistics
+[2026-03-21 19:43:55.795] [INFO] [src/main.cpp:89] Connections handled by ReactorPool: 1
+[2026-03-21 19:43:55.795] [INFO] [src/main.cpp:96] Server stopped gracefully
+[2026-03-21 19:45:06.446] [INFO] [src/main.cpp:49] ========================================
+[2026-03-21 19:45:06.446] [INFO] [src/main.cpp:50]   Day17: HTTP Protocol Parsing
+[2026-03-21 19:45:06.446] [INFO] [src/main.cpp:51] ========================================
+[2026-03-21 19:45:06.446] [INFO] [src/main.cpp:52] Config file: (none)
+[2026-03-21 19:45:06.446] [INFO] [src/main.cpp:53] Port: 8080
+[2026-03-21 19:45:06.446] [INFO] [src/main.cpp:54] Reactor workers: 4
+[2026-03-21 19:45:06.446] [INFO] [src/main.cpp:55] Task workers: 4
+[2026-03-21 19:45:06.446] [INFO] [src/main.cpp:56] Connection timeout: 30 seconds
+[2026-03-21 19:45:06.446] [INFO] [src/main.cpp:57] Task queue size: 100
+[2026-03-21 19:45:06.447] [INFO] [src/main.cpp:58] Log level: DEBUG
+[2026-03-21 19:45:06.447] [INFO] [src/main.cpp:59] Log file: server.log
+[2026-03-21 19:45:06.447] [INFO] [src/main.cpp:60] Console log: enabled
+[2026-03-21 19:45:06.448] [INFO] [src/net/Server.cpp:67] Server socket options: REUSEADDR=on, REUSEPORT=off, NONBLOCK=on
+[2026-03-21 19:45:06.448] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 19:45:06.449] [INFO] [src/main.cpp:64] ========================================
+[2026-03-21 19:45:06.449] [INFO] [src/main.cpp:65]   ReactorPool (Network I/O + Signal)
+[2026-03-21 19:45:06.449] [INFO] [src/main.cpp:66] ========================================
+[2026-03-21 19:45:06.449] [DEBUG] [src/signal/SignalHandler.cpp:180] Installed handlers for SIGINT, SIGTERM, SIGHUP, SIGPIPE
+[2026-03-21 19:45:06.449] [INFO] [src/signal/SignalHandler.cpp:41] Signal handler started
+[2026-03-21 19:45:06.449] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 19:45:06.449] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 19:45:06.449] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 19:45:06.449] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 19:45:06.449] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 19:45:06.449] [INFO] [src/main.cpp:83] signalHandler wait done
+[2026-03-21 19:45:13.403] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:64798 (fd=10)
+[2026-03-21 19:45:13.403] [DEBUG] [src/net/Server.cpp:110] -> Worker 0
+[2026-03-21 19:45:13.403] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:64675 (fd=11)
+[2026-03-21 19:45:13.403] [DEBUG] [src/net/Server.cpp:110] -> Worker 1
+[2026-03-21 19:45:13.403] [DEBUG] [src/net/Server.cpp:119] Accepted 2 connections in one batch
+[2026-03-21 19:45:13.404] [DEBUG] [src/net/Connection.cpp:111] Worker 0 read 717 bytes from 127.0.0.1:64798
+[2026-03-21 19:45:13.404] [INFO] [src/net/Connection.cpp:132] HTTP GET / from 127.0.0.1:64798
+[2026-03-21 19:45:13.461] [DEBUG] [src/net/Connection.cpp:111] Worker 0 read 611 bytes from 127.0.0.1:64798
+[2026-03-21 19:45:13.461] [INFO] [src/net/Connection.cpp:132] HTTP GET /favicon.ico from 127.0.0.1:64798
+[2026-03-21 19:45:13.691] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:63913 (fd=12)
+[2026-03-21 19:45:13.691] [DEBUG] [src/net/Server.cpp:110] -> Worker 2
+[2026-03-21 19:45:26.712] [INFO] [src/signal/SignalHandler.cpp:120] Received SIGINT/SIGTERM, initiating shutdown...
+[2026-03-21 19:45:26.712] [INFO] [src/main.cpp:71] Signal shutdown callback triggered
+[2026-03-21 19:45:26.712] [INFO] [src/main.cpp:73] Signal shutdown callback triggered end
+[2026-03-21 19:45:26.712] [DEBUG] [src/net/Server.cpp:127] handleClose 5
+[2026-03-21 19:45:26.944] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 0...
+[2026-03-21 19:45:26.945] [DEBUG] [src/net/Connection.cpp:205] Worker 0 closing: 127.0.0.1:64798
+[2026-03-21 19:45:26.945] [DEBUG] [src/reactor/Reactor.cpp:57] removeHandler: removing Connection fd=10, timerId=5
+[2026-03-21 19:45:26.945] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 19:45:27.666] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 1...
+[2026-03-21 19:45:27.666] [DEBUG] [src/net/Connection.cpp:205] Worker 1 closing: 127.0.0.1:64675
+[2026-03-21 19:45:27.666] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 2...
+[2026-03-21 19:45:27.666] [DEBUG] [src/reactor/Reactor.cpp:57] removeHandler: removing Connection fd=11, timerId=1
+[2026-03-21 19:45:27.666] [DEBUG] [src/net/Connection.cpp:205] Worker 2 closing: 127.0.0.1:63913
+[2026-03-21 19:45:27.666] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 19:45:27.666] [DEBUG] [src/reactor/Reactor.cpp:57] removeHandler: removing Connection fd=12, timerId=1
+[2026-03-21 19:45:27.666] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 19:45:27.697] [DEBUG] [src/reactor/Reactor.cpp:102] Closing all handlers for Worker 3...
+[2026-03-21 19:45:27.697] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 19:45:27.697] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 19:45:27.697] [INFO] [src/main.cpp:87] ========================================
+[2026-03-21 19:45:27.697] [INFO] [src/main.cpp:88]   Final Statistics
+[2026-03-21 19:45:27.697] [INFO] [src/main.cpp:89] Connections handled by ReactorPool: 3
+[2026-03-21 19:45:27.697] [INFO] [src/main.cpp:96] Server stopped gracefully
