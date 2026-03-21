@@ -3,8 +3,8 @@
 ## 项目信息
 
 - **开始日期**: 2026-03-20
-- **进度**: 8/30 天
-- **状态**: Day08完成
+- **进度**: 13/30 天
+- **状态**: Day13完成
 
 ## 已完成内容
 
@@ -149,9 +149,114 @@
 - **编译状态**: ✓ 编译成功
 - **可运行**: `cd day08 && make && ./server 8080`
 
+### Day09 - 多线程Reactor ✓
+- **目录**: `day09/src/`
+- **文件**:
+  - `EventHandler.h`: 事件处理器抽象接口（无变化）
+  - `Reactor.h/cpp`: 事件分发中心（无变化）
+  - `Server.h/cpp`: 服务器 - 实现EventHandler
+  - `Connection.h/cpp`: 连接 - 实现EventHandler
+  - `Selector.h/cpp`: epoll封装（无变化）
+  - `ReactorPool.h/cpp`: Reactor线程池 - 管理主Reactor和Worker Reactor
+  - `main.cpp`: 程序入口
+  - `Makefile`: 编译脚本
+  - `README.md`: Day09文档
+- **功能**: 多线程Reactor，One Loop Per Thread
+- **核心改进**:
+  - **ReactorPool**: 管理主Reactor和Worker Reactor池
+  - **主Reactor**: 仅处理accept，分发连接到Worker
+  - **Worker Reactor**: 每个线程独立处理连接I/O
+  - **负载均衡**: 轮询分配连接到Worker
+- **编译状态**: ✓ 编译成功
+- **可运行**: `cd day09 && make && ./server 8080`
+
+### Day10 - 线程池实现 ✓
+- **目录**: `day10/src/`
+- **文件**:
+  - `EventHandler.h`: 事件处理器抽象接口（无变化）
+  - `Reactor.h/cpp`: 事件分发中心（无变化）
+  - `Server.h/cpp`: 服务器 - 实现EventHandler
+  - `Connection.h/cpp`: 连接 - 实现EventHandler
+  - `Selector.h/cpp`: epoll封装（无变化）
+  - `ReactorPool.h/cpp`: Reactor线程池（无变化）
+  - `TaskQueue.h/cpp`: 任务队列 - 线程安全的任务分发
+  - `ThreadPool.h/cpp`: 线程池 - 生产者-消费者模式
+  - `main.cpp`: 程序入口
+  - `Makefile`: 编译脚本
+  - `README.md`: Day10文档
+- **功能**: 线程池实现，任务队列支持
+- **核心改进**:
+  - **TaskQueue**: 线程安全队列，push/pop操作
+  - **ThreadPool**: 线程池，Worker线程从队列取任务执行
+  - **生产者-消费者**: 主线程submit任务，Worker线程执行
+- **编译状态**: ✓ 编译成功
+- **可运行**: `cd day10 && make && ./server 8080`
+
+### Day11 - 定时器实现 ✓
+- **目录**: `day11/src/`
+- **文件**:
+  - `EventHandler.h`: 事件处理器抽象接口（无变化）
+  - `Reactor.h/cpp`: 事件分发中心（无变化）
+  - `Server.h/cpp`: 服务器 - 实现EventHandler
+  - `Connection.h/cpp`: 连接 - 实现EventHandler
+  - `Selector.h/cpp`: epoll封装（无变化）
+  - `ReactorPool.h/cpp`: Reactor线程池（无变化）
+  - `TaskQueue.h/cpp`: 任务队列（无变化）
+  - `ThreadPool.h/cpp`: 线程池（无变化）
+  - `Timer.h`: 定时器接口
+  - `TimerHeap.h/cpp`: 最小堆定时器实现
+  - `TimerWheel.h/cpp`: 时间轮定时器实现
+  - `TimerManager.h/cpp`: 定时器管理器
+  - `main.cpp`: 程序入口
+  - `Makefile`: 编译脚本
+  - `README.md`: Day11文档
+- **功能**: 定时器实现，支持超时检测
+- **核心改进**:
+  - **Timer接口**: 统一抽象addTimer/removeTimer/tick
+  - **TimerHeap**: 最小堆实现，O(log n)效率
+  - **TimerWheel**: 时间轮实现，O(1)添加/删除
+  - **TimerManager**: 统一管理，支持切换不同实现
+- **编译状态**: ✓ 编译成功
+- **可运行**: `cd day11 && make && ./server 8080`
+
+### Day12 - 连接超时管理 ✓
+- **目录**: `day12/src/`
+- **文件**:
+  - 继承Day11所有文件
+  - `ConnectionManager.h/cpp`: 连接超时管理器 - 新增
+  - `main.cpp`: 程序入口（更新）
+  - `README.md`: Day12文档
+- **功能**: 连接超时管理，空闲检测和资源回收
+- **核心改进**:
+  - **ConnectionManager**: 统一管理所有连接的定时器
+  - **Reactor集成**: 事件循环支持超时检查
+  - **连接生命周期**: 注册→活动→超时检测→断开→回收
+  - **O(1)定时器重置**: 每次IO活动时更新定时器
+- **编译状态**: ✓ 编译成功
+- **可运行**: `cd day12 && make && ./server 8080`
+
+### Day13 - 基础日志系统 ✓
+- **目录**: `day13/src/`
+- **文件**:
+  - 继承Day12所有文件
+  - `log/Sink.h/cpp`: 输出目标抽象（ConsoleSink、FileSink）
+  - `log/Formatter.h/cpp`: 日志格式化（%d %T %l %t %f %L %m）
+  - `log/Logger.h/cpp`: 日志器核心（级别过滤、单例、宏定义）
+  - `main.cpp`: 程序入口（集成日志）
+  - `README.md`: Day13文档
+- **功能**: 统一日志系统，支持多输出目标和格式化
+- **核心改进**:
+  - **Sink模式**: ConsoleSink/FileSink 分离输出目标
+  - **日志级别**: TRACE/DEBUG/INFO/WARN/ERROR/FATAL
+  - **格式化器**: 可配置格式串，支持时间/级别/文件/行号
+  - **全局日志器**: 单例模式，LOG_INFO等宏方便调用
+  - **全局替换**: 所有std::cout/std::cerr统一替换为LOG_*
+- **编译状态**: ✓ 编译成功
+- **可运行**: `cd day13 && make && ./server 8080`
+
 ## 设计要点符合用户要求
 
-- ✓ **每天独立目录**: `day01/` ~ `day08/` 已创建
+- ✓ **每天独立目录**: `day01/` ~ `day13/` 已创建
 - ✓ **相互独立**: 每个目录都有完整的独立编译
 - ✓ **无外部依赖**: 仅使用标准C++和Linux系统API
 - ✓ **Makefile**: 每个目录都有独立Makefile
@@ -177,19 +282,22 @@ Day06: 非阻塞I/O（server socket + accept完全非阻塞）
 Day07: Reactor模式基础（事件源 + 处理器注册）
   ↓
 Day08: 完整Reactor实现（优雅关闭 + 连接统计）
+  ↓
+Day09: 多线程Reactor（One Loop Per Thread）
+  ↓
+Day10: 线程池实现（任务队列 + Worker）
+  ↓
+Day11: 定时器实现（最小堆 + 时间轮）
+  ↓
+Day12: 连接超时管理（空闲检测 + 资源回收）
+  ↓
+Day13: 基础日志系统（日志级别 + 格式化输出）
 ```
 
-## 后续计划 (Day07 - Day30)
+## 后续计划 (Day14 - Day30)
 
 | Day | 主题 | 核心新增 |
 |-----|------|----------|
-| 07 | Reactor模式基础 | 事件源 + 处理器注册 |
-| 08 | 完整Reactor实现 | 优雅关闭 + 连接统计 |
-| 09 | 多线程Reactor | One Loop per Thread |
-| 10 | 线程池实现 | 任务队列 + Worker |
-| 11 | 定时器实现 | 最小堆时间管理 |
-| 12 | 连接超时管理 | 空闲检测和回收 |
-| 13 | 基础日志系统 | 日志级别 + 输出 |
 | 14 | 配置系统 | 配置文件解析 |
 | 15 | 信号处理 | 优雅退出 |
 | 16 | 地址复用 | SO_REUSEADDR |
@@ -235,8 +343,23 @@ cd day07 && make clean && make && sudo ./server 8080
 # 编译Day08
 cd day08 && make clean && make && sudo ./server 8080
 
+# 编译Day09
+cd day09 && make clean && make && sudo ./server 8080
+
+# 编译Day10
+cd day10 && make clean && make && sudo ./server 8080
+
+# 编译Day11
+cd day11 && make clean && make && sudo ./server 8080
+
+# 编译Day12
+cd day12 && make clean && make && sudo ./server 8080
+
+# 编译Day13
+cd day13 && make clean && make && sudo ./server 8080
+
 # 清理所有
-for d in day0{1,2,3,4,5,6,7,8}; do cd $d && make clean && cd ..; done
+for d in day{01,02,03,04,05,06,07,08,09,10,11,12,13}; do cd $d && make clean && cd ..; done
 ```
 
 ## 设计原则回顾
@@ -250,4 +373,4 @@ for d in day0{1,2,3,4,5,6,7,8}; do cd $d && make clean && cd ..; done
 
 ---
 
-*最后更新: 2026-03-20*
+*最后更新: 2026-03-21*

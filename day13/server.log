@@ -1,0 +1,98 @@
+[2026-03-21 16:07:49.388] [INFO] [src/main.cpp:78] Connection timeout demo (30 seconds idle)
+[2026-03-21 16:07:49.389] [INFO] [src/main.cpp:79] Connect with: nc localhost 8080
+[2026-03-21 16:07:49.389] [INFO] [src/main.cpp:80] Then wait 30 seconds without sending data
+[2026-03-21 16:07:49.389] [INFO] [src/main.cpp:91] Submitting demo tasks to ThreadPool...
+[2026-03-21 16:07:49.389] [INFO] [src/main.cpp:94] Worker 0 executing...
+[2026-03-21 16:07:49.389] [INFO] [src/main.cpp:94] Worker 1 executing...
+[2026-03-21 16:07:49.389] [INFO] [src/main.cpp:94] Worker 2 executing...
+[2026-03-21 16:07:49.496] [INFO] [src/main.cpp:101] Demo tasks completed: 3 executed
+[2026-03-21 16:08:10.739] [INFO] [src/main.cpp:120] Tasks executed by ThreadPool: 3
+[2026-03-21 16:08:10.739] [INFO] [src/main.cpp:121] Connections handled by ReactorPool: 1
+[2026-03-21 16:08:10.739] [INFO] [src/main.cpp:128] Server stopped
+[2026-03-21 16:09:13.837] [INFO] [src/main.cpp:78] Connection timeout demo (30 seconds idle)
+[2026-03-21 16:09:13.837] [INFO] [src/main.cpp:79] Connect with: nc localhost 8080
+[2026-03-21 16:09:13.837] [INFO] [src/main.cpp:80] Then wait 30 seconds without sending data
+[2026-03-21 16:09:13.837] [INFO] [src/main.cpp:91] Submitting demo tasks to ThreadPool...
+[2026-03-21 16:09:13.837] [INFO] [src/main.cpp:94] Worker 2 executing...
+[2026-03-21 16:09:13.838] [INFO] [src/main.cpp:94] Worker 1 executing...
+[2026-03-21 16:09:13.837] [INFO] [src/main.cpp:94] Worker 0 executing...
+[2026-03-21 16:09:13.944] [INFO] [src/main.cpp:101] Demo tasks completed: 3 executed
+[2026-03-21 16:09:15.956] [INFO] [src/main.cpp:120] Tasks executed by ThreadPool: 3
+[2026-03-21 16:09:15.956] [INFO] [src/main.cpp:121] Connections handled by ReactorPool: 0
+[2026-03-21 16:09:15.956] [INFO] [src/main.cpp:128] Server stopped
+[2026-03-21 16:15:33.254] [INFO] [src/main.cpp:74] ========================================
+[2026-03-21 16:15:33.254] [INFO] [src/main.cpp:75]   Day13: Logging System
+[2026-03-21 16:15:33.254] [INFO] [src/main.cpp:76] ========================================
+[2026-03-21 16:15:33.254] [INFO] [src/main.cpp:78] Connection timeout demo (30 seconds idle)
+[2026-03-21 16:15:33.254] [INFO] [src/main.cpp:79] Connect with: nc localhost 8080
+[2026-03-21 16:15:33.254] [INFO] [src/main.cpp:80] Then wait 30 seconds without sending data
+[2026-03-21 16:15:33.254] [INFO] [src/main.cpp:85] ========================================
+[2026-03-21 16:15:33.254] [INFO] [src/main.cpp:86]   ThreadPool Demo
+[2026-03-21 16:15:33.254] [INFO] [src/main.cpp:87] ========================================
+[2026-03-21 16:15:33.254] [INFO] [src/thread/ThreadPool.cpp:38] Started 4 worker threads
+[2026-03-21 16:15:33.254] [INFO] [src/main.cpp:91] Submitting demo tasks to ThreadPool...
+[2026-03-21 16:15:33.254] [INFO] [src/main.cpp:94] Worker 0 executing...
+[2026-03-21 16:15:33.255] [INFO] [src/main.cpp:94] Worker 1 executing...
+[2026-03-21 16:15:33.255] [INFO] [src/main.cpp:94] Worker 2 executing...
+[2026-03-21 16:15:33.360] [INFO] [src/main.cpp:101] Demo tasks completed: 3 executed
+[2026-03-21 16:15:33.362] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 16:15:33.363] [INFO] [src/main.cpp:106] ========================================
+[2026-03-21 16:15:33.363] [INFO] [src/main.cpp:107]   ReactorPool (Network I/O + Timeout)
+[2026-03-21 16:15:33.363] [INFO] [src/main.cpp:108] ========================================
+[2026-03-21 16:15:33.363] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 16:15:33.363] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 16:15:33.363] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 16:15:33.363] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 16:15:33.363] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 16:15:35.254] [INFO] [src/thread/ThreadPool.cpp:92] All workers stopped
+[2026-03-21 16:15:35.366] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 16:15:35.367] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 16:15:35.368] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 16:15:35.372] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 16:15:35.372] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 16:15:35.372] [INFO] [src/main.cpp:117] ========================================
+[2026-03-21 16:15:35.372] [INFO] [src/main.cpp:118]   Final Statistics
+[2026-03-21 16:15:35.372] [INFO] [src/main.cpp:119] ========================================
+[2026-03-21 16:15:35.372] [INFO] [src/main.cpp:120] Tasks executed by ThreadPool: 3
+[2026-03-21 16:15:35.372] [INFO] [src/main.cpp:121] Connections handled by ReactorPool: 0
+[2026-03-21 16:15:35.372] [INFO] [src/main.cpp:128] Server stopped
+[2026-03-21 16:17:25.004] [INFO] [src/main.cpp:74] ========================================
+[2026-03-21 16:17:25.004] [INFO] [src/main.cpp:75]   Day13: Logging System
+[2026-03-21 16:17:25.004] [INFO] [src/main.cpp:76] ========================================
+[2026-03-21 16:17:25.004] [INFO] [src/main.cpp:78] Connection timeout demo (30 seconds idle)
+[2026-03-21 16:17:25.004] [INFO] [src/main.cpp:79] Connect with: nc localhost 8080
+[2026-03-21 16:17:25.004] [INFO] [src/main.cpp:80] Then wait 30 seconds without sending data
+[2026-03-21 16:17:25.004] [INFO] [src/main.cpp:85] ========================================
+[2026-03-21 16:17:25.004] [INFO] [src/main.cpp:86]   ThreadPool Demo
+[2026-03-21 16:17:25.004] [INFO] [src/main.cpp:87] ========================================
+[2026-03-21 16:17:25.005] [INFO] [src/thread/ThreadPool.cpp:38] Started 4 worker threads
+[2026-03-21 16:17:25.005] [INFO] [src/main.cpp:91] Submitting demo tasks to ThreadPool...
+[2026-03-21 16:17:25.005] [INFO] [src/main.cpp:94] Worker 0 executing...
+[2026-03-21 16:17:25.005] [INFO] [src/main.cpp:94] Worker 1 executing...
+[2026-03-21 16:17:25.005] [INFO] [src/main.cpp:94] Worker 2 executing...
+[2026-03-21 16:17:25.112] [INFO] [src/main.cpp:101] Demo tasks completed: 3 executed
+[2026-03-21 16:17:25.113] [INFO] [src/net/Server.cpp:30] Server listening on port 8080
+[2026-03-21 16:17:25.114] [INFO] [src/main.cpp:106] ========================================
+[2026-03-21 16:17:25.114] [INFO] [src/main.cpp:107]   ReactorPool (Network I/O + Timeout)
+[2026-03-21 16:17:25.114] [INFO] [src/main.cpp:108] ========================================
+[2026-03-21 16:17:25.114] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 0 started
+[2026-03-21 16:17:25.114] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 3 started
+[2026-03-21 16:17:25.114] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 2 started
+[2026-03-21 16:17:25.114] [INFO] [src/reactor/ReactorPool.cpp:48] Main Reactor started
+[2026-03-21 16:17:25.114] [INFO] [src/reactor/ReactorPool.cpp:42] Worker Reactor 1 started
+[2026-03-21 16:17:30.204] [INFO] [src/net/Server.cpp:87] Accepted client: 127.0.0.1:48128 (fd=10)
+[2026-03-21 16:17:38.954] [INFO] [src/net/Connection.cpp:96] Client disconnected: 127.0.0.1:48128
+[2026-03-21 16:17:42.366] [INFO] [src/net/Server.cpp:87] Accepted client: 127.0.0.1:44640 (fd=10)
+[2026-03-21 16:17:44.149] [INFO] [src/net/Connection.cpp:96] Client disconnected: 127.0.0.1:44640
+[2026-03-21 16:17:47.635] [INFO] [src/thread/ThreadPool.cpp:92] All workers stopped
+[2026-03-21 16:17:47.876] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 2 stopped
+[2026-03-21 16:17:47.893] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 3 stopped
+[2026-03-21 16:17:48.191] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 1 stopped
+[2026-03-21 16:17:48.492] [INFO] [src/reactor/ReactorPool.cpp:44] Worker Reactor 0 stopped
+[2026-03-21 16:17:48.492] [INFO] [src/reactor/ReactorPool.cpp:73] Main Reactor stopped
+[2026-03-21 16:17:48.492] [INFO] [src/main.cpp:117] ========================================
+[2026-03-21 16:17:48.493] [INFO] [src/main.cpp:118]   Final Statistics
+[2026-03-21 16:17:48.493] [INFO] [src/main.cpp:119] ========================================
+[2026-03-21 16:17:48.493] [INFO] [src/main.cpp:120] Tasks executed by ThreadPool: 3
+[2026-03-21 16:17:48.493] [INFO] [src/main.cpp:121] Connections handled by ReactorPool: 2
+[2026-03-21 16:17:48.493] [INFO] [src/main.cpp:128] Server stopped
