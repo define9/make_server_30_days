@@ -8,6 +8,7 @@
 #include <iostream>
 #include <vector>
 #include <errno.h>
+#include "Connection.h"
 
 Reactor::Reactor()
     : m_running(false)
@@ -34,9 +35,21 @@ void Reactor::removeHandler(EventHandler* handler)
 {
     if (!handler) return;
 
+    // 从 handlers 里移除
     int fd = handler->fd();
+
     m_handlers.erase(fd);
     m_selector.removeFd(fd);
+
+    // 关闭
+    handler->handleClose();
+
+    // Connection类型需要从连接管理器移除
+    Connection* conn = dynamic_cast<Connection*>(handler);
+    if (conn) {
+        std::cout << "[Reactor] removeHandler: removing Connection fd=" << fd << std::endl;
+        delete conn;
+    }
 }
 
 void Reactor::loop()
@@ -74,13 +87,14 @@ void Reactor::closeAllHandlers()
     if (m_workerId >= 0) {
         std::cout << "[Reactor] Closing all handlers for Worker " << m_workerId << "..." << std::endl;
     }
-    for (auto& pair : m_handlers) {
-        EventHandler* handler = pair.second;
+    
+    while (!m_handlers.empty()) {
+        auto it = m_handlers.begin();
+        EventHandler* handler = it->second;
         if (handler) {
-            handler->handleClose();
+            removeHandler(handler);
         }
     }
-    m_handlers.clear();
 }
 
 void Reactor::handleEvents()
@@ -125,7 +139,6 @@ void Reactor::handleEvents()
     }
 
     for (EventHandler* handler : toRemove) {
-        handler->handleClose();
         removeHandler(handler);
     }
 }

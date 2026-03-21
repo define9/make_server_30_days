@@ -73,6 +73,8 @@ void Reactor::removeHandler(EventHandler* handler)
     int fd = handler->fd();
     m_handlers.erase(fd);
     m_selector.removeFd(fd);
+
+    delete handler;
 }
 
 /**

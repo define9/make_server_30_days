@@ -77,10 +77,16 @@ bool ClientHandler::readAndEcho()
 
     // 简单的echo：把收到的数据原样发回去
     // 注意：这只是echo，实际服务器可能会有其他处理逻辑
-    ssize_t bytesWritten = write(m_clientSocket, buffer, bytesRead);
+    // 使用send()替代write()，配合MSG_NOSIGNAL避免SIGPIPE
+    ssize_t bytesWritten = send(m_clientSocket, buffer, bytesRead, MSG_NOSIGNAL);
 
     if (bytesWritten < 0) {
-        std::cerr << "[Handler] write() error for " << getClientInfo() << std::endl;
+        // EPIPE表示对端已关闭连接，不是错误而是正常断开
+        if (errno == EPIPE) {
+            std::cout << "[Handler] Client closed connection (EPIPE): " << getClientInfo() << std::endl;
+            return false;
+        }
+        std::cerr << "[Handler] send() error for " << getClientInfo() << std::endl;
         return false;
     }
 

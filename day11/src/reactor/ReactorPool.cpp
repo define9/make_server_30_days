@@ -1,0 +1,89 @@
+/**
+ * @file ReactorPool.cpp
+ * @brief ReactorPool实现
+ */
+
+#include "ReactorPool.h"
+#include "net/Server.h"
+#include <iostream>
+#include <chrono>
+
+ReactorPool::ReactorPool(uint16_t port, int numWorkers)
+    : m_numWorkers(numWorkers)
+    , m_nextReactor(0)
+    , m_running(false)
+{
+    m_mainReactor = std::make_unique<Reactor>();
+    
+    auto callback = [this]() -> Reactor* {
+        return getNextWorker();
+    };
+    m_server = std::make_unique<Server>(port, m_mainReactor.get(), callback);
+    
+    for (int i = 0; i < m_numWorkers; ++i) {
+        m_workers.push_back(std::make_unique<Reactor>());
+        m_workers[i]->setWorkerId(i);
+    }
+}
+
+ReactorPool::~ReactorPool()
+{
+    stop();
+}
+
+void ReactorPool::start()
+{
+    m_running = true;
+    
+    for (int i = 0; i < m_numWorkers; ++i) {
+        m_threads.emplace_back([this, i]() {
+            std::cout << "[Reactor] Worker Reactor " << i << " started" << std::endl;
+            m_workers[i]->loop();
+            std::cout << "[Reactor] Worker Reactor " << i << " stopped" << std::endl;
+        });
+    }
+    
+    std::cout << "[Reactor] Main Reactor started" << std::endl;
+}
+
+void ReactorPool::stop()
+{
+    if (!m_running) return;
+    m_running = false;
+    
+    m_mainReactor->stop();
+
+    for (int i = 0; i < m_numWorkers; i++) {
+        m_workers[i]->stop();
+    }
+}
+
+void ReactorPool::waitForExit()
+{
+    m_mainReactor->loop();
+    
+    for (auto& thread : m_threads) {
+        if (thread.joinable()) {
+            thread.join();
+        }
+    }
+    
+    std::cout << "[Reactor] Main Reactor stopped" << std::endl;
+}
+
+Reactor* ReactorPool::getNextWorker()
+{
+    std::lock_guard<std::mutex> lock(m_mutex);
+    Reactor* worker = m_workers[m_nextReactor].get();
+    m_nextReactor = (m_nextReactor + 1) % m_numWorkers;
+    return worker;
+}
+
+uint64_t ReactorPool::totalConnections() const
+{
+    uint64_t total = 0;
+    for (const auto& worker : m_workers) {
+        total += worker->totalConnections();
+    }
+    return total;
+}
