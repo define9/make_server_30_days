@@ -8,7 +8,7 @@
 
 ## 在线对比
 
-每天代码差异对比：[https://define9.github.io/make_server_30_days/compare-site/](https://define9.github.io/make_server_30_days/compare-site/)
+每天代码差异对比：[在线代码比较](https://define9.github.io/make_server_30_days/)
 
 ## 学习路线
 
