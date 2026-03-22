@@ -86,7 +86,8 @@ void Reactor::loop()
         // 每次循环都检查超时（定时器tick）
         m_connManager.checkTimeouts();
     }
-
+    
+    LOG_DEBUG("loop end, closing handles :%d...", m_workerId);
     closeAllHandlers();
 }
 

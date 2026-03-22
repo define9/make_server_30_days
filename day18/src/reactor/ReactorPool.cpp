@@ -63,6 +63,8 @@ void ReactorPool::stop()
 void ReactorPool::waitForExit()
 {
     m_mainReactor->loop();
+
+    LOG_INFO("Main Reactor stopped");
     
     for (auto& thread : m_threads) {
         if (thread.joinable()) {
@@ -70,7 +72,7 @@ void ReactorPool::waitForExit()
         }
     }
     
-    LOG_INFO("Main Reactor stopped");
+    LOG_INFO("Reactor Sub Thread stopped");
 }
 
 Reactor* ReactorPool::getNextWorker()

@@ -103,8 +103,7 @@ bool Connection::handleRead()
         }
 
         if (bytesRead == 0) {
-            LOG_INFO("Client disconnected: %s", getClientInfo().c_str());
-            return false;
+            break;
         }
 
         m_readBuffer.append(buffer, bytesRead);
