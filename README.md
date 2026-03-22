@@ -6,6 +6,10 @@
 
 本项目是一个25天的渐进式学习项目，每天一个独立目录。从基础的阻塞I/O服务器开始，演进到完整的多路复用服务器，最终实现一个支持长连接、Chunked传输、SSE的小型HTTP服务器。
 
+## 在线对比
+
+每天代码差异对比：[https://define9.github.io/make_server_30_days/compare-site/](https://define9.github.io/make_server_30_days/compare-site/)
+
 ## 学习路线
 
 | Day | 状态 | 主题 | 核心概念 |

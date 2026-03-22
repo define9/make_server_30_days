@@ -1,0 +1,14 @@
+# Build artifacts
+*/build/
+*/server
+*.o
+*.d
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{PREV_DAY}} → {{CURR_DAY}} | Diff Viewer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/diff2html@3/bundles/css/diff2html.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      min-height: 100vh;
+    }
+    .header {
+      background: #161b22;
+      border-bottom: 1px solid #30363d;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-content {
+      max-width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .title {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .title span {
+      color: #58a6ff;
+    }
+    .nav {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .nav-btn {
+      background: #21262d;
+      border: 1px solid #30363d;
+      color: #c9d1d9;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+    }
+    .nav-btn:hover:not(:disabled) {
+      background: #30363d;
+      border-color: #8b949e;
+    }
+    .nav-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .summary {
+      font-size: 0.875rem;
+      color: #8b949e;
+    }
+    .main {
+      padding: 1rem;
+      overflow-x: visible;
+    }
+    .back-link {
+      display: inline-block;
+      margin-right: 1rem;
+      color: #58a6ff;
+      text-decoration: none;
+      font-size: 0.875rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    #diff-output {
+      font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+      font-size: 0.8125rem;
+    }
+    .d2h-wrapper {
+      background: #0d1117 !important;
+    }
+    .d2h-files-diff {
+      overflow-x: visible !important;
+    }
+    .d2h-diff-table {
+      overflow: visible !important;
+    }
+    .d2h-code-len-plus {
+      overflow: visible !important;
+    }
+    .d2h-code-row {
+      overflow: visible !important;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #161b22;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #30363d;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #484f58;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="title">
+        <a href="../index.html" class="back-link">← Index</a>
+        <span>{{PREV_DAY}}</span> → <span>{{CURR_DAY}}</span>
+        <span class="summary">({{SUMMARY}})</span>
+      </div>
+      <div class="nav">
+        <a href="{{PREV_LINK}}" class="nav-btn" {{PREV_DISABLED}}>← {{PREV_DAY}}</a>
+        <span class="nav-btn" style="background: transparent; border: none;">{{NAV_INFO}}</span>
+        <a href="{{NEXT_LINK}}" class="nav-btn" {{NEXT_DISABLED}}>{{CURR_DAY}} →</a>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div id="diff-output"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/diff2html@3/bundles/js/diff2html.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const diffString = {{DIFF_JSON}};
+      const diffHtml = Diff2Html.html(diffString, {
+        drawFileList: true,
+        matching: 'lines',
+        outputFormat: 'side-by-side',
+        highlight: true,
+        fileContentToggle: true,
+        colorScheme: 'dark'
+      });
+      document.getElementById('diff-output').innerHTML = diffHtml;
+    });
+  </script>
+</body>
+</html>
