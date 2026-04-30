@@ -3,8 +3,8 @@
 ## 项目信息
 
 - **开始日期**: 2026-03-20
-- **进度**: 19/25 天
-- **状态**: Day19完成
+- **进度**: 22/25 天
+- **状态**: Day22完成
 
 ## 已完成内容
 
@@ -347,9 +347,50 @@
 - **编译状态**: ✓ 编译成功
 - **可运行**: `cd day19 && make && ./server`
 
+### Day20 - 静态文件服务 ✓
+- **目录**: `day20/src/`
+- **文件**:
+  - 继承Day19所有文件
+  - `util/MimeType.h/cpp`: MIME类型映射
+  - `util/FileUtil.h/cpp`: 文件读取工具
+  - `Connection.cpp`: 改造支持静态文件服务
+- **功能**: 静态文件服务，文件读取和MIME类型判断
+- **核心改进**:
+  - **MimeType类**: 根据文件扩展名返回正确MIME类型
+  - **FileUtil类**: 安全读取文件内容
+  - **静态文件路由**: `/static/*` 路径映射到实际文件
+- **编译状态**: ✓ 编译成功
+- **可运行**: `cd day20 && make && ./server`
+
+### Day21 - 请求路由 ✓
+- **目录**: `day21/src/`
+- **文件**:
+  - 继承Day20所有文件
+  - `http/SimpleRouter.h/cpp`: 极简路由实现
+  - `main.cpp`: 路由注册
+- **功能**: 请求路由，URL模式匹配
+- **核心改进**:
+  - **SimpleRouter单例**: 全局共享路由表
+  - **模式匹配**: 支持 `/user/:id` 格式
+  - **链式API**: get/post/put/del 方便注册
+- **编译状态**: ✓ 编译成功
+- **可运行**: `cd day21 && make && ./server`
+
+### Day22 - 整合测试 ✓
+- **目录**: `day22/src/`
+- **文件**:
+  - 继承Day21所有文件
+  - `main.cpp`: 新增边界测试路由
+- **功能**: 模块联调与边界情况测试
+- **核心改进**:
+  - **边界测试端点**: `/test/empty`, `/test/big-header`, `/test/chunked`, `/test/echo`
+  - **日志优化**: 更清晰的测试输出
+- **编译状态**: ✓ 编译成功
+- **可运行**: `cd day22 && make && ./server`
+
 ## 设计要点符合用户要求
 
-- ✓ **每天独立目录**: `day01/` ~ `day13/` 已创建
+- ✓ **每天独立目录**: `day01/` ~ `day22/` 已创建
 - ✓ **相互独立**: 每个目录都有完整的独立编译
 - ✓ **无外部依赖**: 仅使用标准C++和Linux系统API
 - ✓ **Makefile**: 每个目录都有独立Makefile
@@ -397,16 +438,20 @@ Day17: HTTP协议解析（状态机、请求/响应）
 Day18: HTTP长连接（Keep-Alive、连接复用）
   ↓
 Day19: Chunked分块传输（Transfer-Encoding: chunked）
+  ↓
+Day20: 静态文件服务（文件读取、MIME类型）
+  ↓
+Day21: 请求路由（URL模式匹配）
+  ↓
+Day22: 整合测试（模块联调、边界情况）
+  ↓
+Day23: 细节打磨（错误处理、边界条件）
 ```
 
-## 后续计划 (Day20 - Day25)
+## 后续计划 (Day24 - Day25)
 
 | Day | 主题 | 核心新增 |
 |-----|------|----------|
-| 20 | 静态文件服务 | 文件读取、MIME类型 |
-| 21 | 连接超时与优雅关闭 | 资源回收 |
-| 22 | 整合测试 | 模块联调 |
-| 23 | 细节打磨 | 错误处理 |
 | 24 | SSE/Stream HTTP | text/event-stream、流式推送 |
 | 25 | 完整HTTP服务器 | 架构整合 |
 
@@ -479,8 +524,17 @@ cd day18 && make clean && make && sudo ./server
 # Day19
 cd day19 && make clean && make && sudo ./server
 
+# Day20
+cd day20 && make clean && make && sudo ./server
+
+# Day21
+cd day21 && make clean && make && sudo ./server
+
+# Day22
+cd day22 && make clean && make && sudo ./server
+
 # 清理所有
-for d in day{01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19}; do cd $d && make clean && cd ..; done
+for d in day{01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22}; do cd $d && make clean && cd ..; done
 ```
 
 ## 设计原则回顾
