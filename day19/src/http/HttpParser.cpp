@@ -192,6 +192,7 @@ size_t HttpParser::parseBody(const char* data, size_t len) {
         bodyLen = contentLength - m_bodyRead;
     }
 
+    m_request.appendBody(data, bodyLen);
     m_bodyRead += bodyLen;
 
     if (m_bodyRead >= static_cast<size_t>(contentLength)) {
@@ -227,8 +228,7 @@ size_t HttpParser::parseChunkSize(const char* data, size_t len) {
     m_chunkDataRead = 0;
 
     if (m_chunkSize == 0) {
-        m_request.setComplete(true);
-        m_state = HttpParserState::PARSE_COMPLETE;
+        m_state = HttpParserState::CHUNK_END;
     } else {
         m_state = HttpParserState::CHUNK_DATA;
     }
@@ -240,6 +240,7 @@ size_t HttpParser::parseChunkData(const char* data, size_t len) {
     size_t remaining = m_chunkSize - m_chunkDataRead;
     size_t toConsume = std::min(remaining, len);
 
+    m_request.appendBody(data, toConsume);
     m_chunkDataRead += toConsume;
 
     if (m_chunkDataRead >= m_chunkSize) {
@@ -253,7 +254,12 @@ size_t HttpParser::parseChunkEnd(const char* data, size_t len) {
     if (len < 2) return 0;
 
     if (data[0] == '\r' && data[1] == '\n') {
-        m_state = HttpParserState::CHUNK_SIZE;
+        if (m_chunkSize == 0) {
+            m_request.setComplete(true);
+            m_state = HttpParserState::PARSE_COMPLETE;
+        } else {
+            m_state = HttpParserState::CHUNK_SIZE;
+        }
         return 2;
     }
 

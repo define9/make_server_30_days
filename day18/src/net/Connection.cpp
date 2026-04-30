@@ -207,8 +207,26 @@ bool Connection::handleWrite()
         if (!m_keepAlive) {
             m_state = ConnState::CLOSING;
         }
+        // 响应发送完毕后，检查 buffer 中是否还有未解析的下一个请求
+        // （handleRead 可能在解析完一个请求后，还有剩余数据在 buffer 中）
+        if (m_keepAlive && !m_readBuffer.empty()) {
+            size_t consumed = m_httpParser.parse(m_readBuffer.data(), m_readBuffer.size());
+            if (consumed > 0) {
+                m_readBuffer.erase(0, consumed);
+            }
+            if (m_httpParser.hasCompleteRequest()) {
+                if (!processHttpRequest()) {
+                    return false;
+                }
+                if (!m_keepAlive) {
+                    m_state = ConnState::CLOSING;
+                } else {
+                    m_httpParser.reset();
+                }
+            }
+        }
     } else {
-        LOG_DEBUG("Worker %d remaining %zu bytes to %s", 
+        LOG_DEBUG("Worker %d remaining %zu bytes to %s",
                   m_workerId, m_writeBuffer.size(), getClientInfo().c_str());
     }
 

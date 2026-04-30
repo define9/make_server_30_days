@@ -3,8 +3,8 @@
 ## 项目信息
 
 - **开始日期**: 2026-03-20
-- **进度**: 17/25 天
-- **状态**: Day17完成
+- **进度**: 19/25 天
+- **状态**: Day19完成
 
 ## 已完成内容
 
@@ -319,6 +319,34 @@
 - **编译状态**: ✓ 编译成功
 - **可运行**: `cd day17 && make && ./server`
 
+### Day18 - HTTP长连接 ✓
+- **目录**: `day18/src/`
+- **文件**:
+  - 继承Day17所有文件
+  - `Connection.cpp`: 改造支持长连接复用
+- **功能**: HTTP长连接 (Keep-Alive)，连接复用
+- **核心改进**:
+  - **不再立即清空缓冲区**: 解析完请求后保留剩余数据
+  - **Keep-Alive支持**: 检查Connection头决定是否保持连接
+  - **状态管理**: 响应发送完再重置parser
+- **编译状态**: ✓ 编译成功
+- **可运行**: `cd day18 && make && ./server`
+
+### Day19 - Chunked分块传输 ✓
+- **目录**: `day19/src/`
+- **文件**:
+  - 继承Day18所有文件
+  - `http/HttpResponse.h/cpp`: 添加chunked编码支持
+  - `http/HttpParser.h/cpp`: 支持chunked请求解析
+  - `Connection.cpp`: 分块流式发送
+- **功能**: Chunked分块传输 (Transfer-Encoding: chunked)
+- **核心改进**:
+  - **流式响应**: 无需预先知道Content-Length
+  - **Chunked格式**: 十六进制大小块 + 数据块
+  - **终止块**: "0\r\n\r\n" 正常结束
+- **编译状态**: ✓ 编译成功
+- **可运行**: `cd day19 && make && ./server`
+
 ## 设计要点符合用户要求
 
 - ✓ **每天独立目录**: `day01/` ~ `day13/` 已创建
@@ -365,14 +393,16 @@ Day15: 信号处理（SIGTERM/SIGINT、优雅退出）
 Day16: 网络选项优化（SO_REUSEADDR、TCP_NODELAY）
   ↓
 Day17: HTTP协议解析（状态机、请求/响应）
+  ↓
+Day18: HTTP长连接（Keep-Alive、连接复用）
+  ↓
+Day19: Chunked分块传输（Transfer-Encoding: chunked）
 ```
 
-## 后续计划 (Day18 - Day25)
+## 后续计划 (Day20 - Day25)
 
 | Day | 主题 | 核心新增 |
 |-----|------|----------|
-| 18 | HTTP长连接 | Keep-Alive、Connection头 |
-| 19 | Chunked分块传输 | Transfer-Encoding: chunked |
 | 20 | 静态文件服务 | 文件读取、MIME类型 |
 | 21 | 连接超时与优雅关闭 | 资源回收 |
 | 22 | 整合测试 | 模块联调 |
@@ -443,8 +473,14 @@ cd day16 && make clean && make && sudo ./server
 # Day17
 cd day17 && make clean && make && sudo ./server
 
+# Day18
+cd day18 && make clean && make && sudo ./server
+
+# Day19
+cd day19 && make clean && make && sudo ./server
+
 # 清理所有
-for d in day{01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17}; do cd $d && make clean && cd ..; done
+for d in day{01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19}; do cd $d && make clean && cd ..; done
 ```
 
 ## 设计原则回顾
@@ -458,4 +494,4 @@ for d in day{01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17}; do cd $d && ma
 
 ---
 
-*最后更新: 2026-03-21*
+*最后更新: 2026-04-30*

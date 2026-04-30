@@ -121,30 +121,75 @@ make clean && make
 
 # 启动服务器
 sudo ./server
+```
 
-# 测试长连接 (多个请求复用同一个连接)
+### ⚠️ 注意：curl每次调用都是独立进程，无法测试连接复用
+
+curl每次执行都会创建新的TCP连接，所以以下测试会显示**三个不同的源端口**，这不是服务器的问题，而是测试方法的局限：
+
+```bash
+# 错误示范 - 每次curl都是新连接，无法验证Keep-Alive
 curl -v -k http://localhost:8080/
 curl -v -k http://localhost:8080/api?foo=bar
 curl -v -k -X POST http://localhost:8080/ -d "name=test"
-
-# 使用-p保留连接测试
-curl -v -k -p http://localhost:8080/
-
-# 测试短连接 (Connection: close)
-curl -v -k -H "Connection: close" http://localhost:8080/
 ```
 
-## 预期输出
+### ✅ 正确的Keep-Alive测试方法
+
+**方法1：使用nc（netcat）在同一连接发送多个请求**
+
+```bash
+# 在同一个TCP连接上发送两个HTTP请求
+nc localhost 8080
+GET / HTTP/1.1
+Host: localhost
+
+GET /api?foo=bar HTTP/1.1
+Host: localhost
+
+# 输入空行后按Ctrl+C结束
+```
+
+**方法2：使用printf管道发送多个请求**
+
+```bash
+# 在同一个TCP连接上发送两个请求，验证连接复用
+printf "GET / HTTP/1.1\r\nHost: localhost\r\n\r\nGET /api?foo=bar HTTP/1.1\r\nHost: localhost\r\n\r\n" | nc localhost 8080
+```
+
+**方法3：测试短连接（Connection: close）**
+
+```bash
+# 发送Connection: close头，服务器应在响应后关闭连接
+printf "GET / HTTP/1.1\r\nHost: localhost\r\nConnection: close\r\n\r\n" | nc localhost 8080
+```
+
+**方法4：使用telnet测试交互式会话**
+
+```bash
+telnet localhost 8080
+GET / HTTP/1.1
+Host: localhost
+
+GET /api?foo=bar HTTP/1.1
+Host: localhost
+```
+
+### 预期输出
 
 ```
 ========================================
   Day18: HTTP Long Connection
 ========================================
-...
-HTTP GET / from 127.0.0.1:xxxxx
-HTTP GET /api?foo=bar from 127.0.0.1:xxxxx  (同一连接)
-HTTP POST / from 127.0.0.1:xxxxx          (同一连接)
+[2026-04-30 17:07:35.225] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:46094 (fd=10)
+[2026-04-30 17:07:35.226] [DEBUG] [src/net/Server.cpp:110] -> Worker 0
+[2026-04-30 17:07:35.226] [INFO] [src/net/Connection.cpp:142] HTTP GET / from 127.0.0.1:46094
+[2026-04-30 17:07:35.228] [INFO] [src/net/Connection.cpp:142] HTTP GET /api?foo=bar from 127.0.0.1:46094
 ```
+
+**关键验证点**：
+- 同一源端口（46094）上处理了多个请求 → 连接复用成功！
+- 如果每次请求显示不同端口 → curl是独立进程，不是连接复用的问题
 
 ## 下一步
 

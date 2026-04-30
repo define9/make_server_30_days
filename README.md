@@ -31,8 +31,8 @@
 | Day15 | ✅ | 信号处理 | SIGTERM/SIGINT、优雅退出 |
 | Day16 | ✅ | 网络选项优化 | SO_REUSEADDR、TCP_NODELAY |
 | Day17 | ✅ | HTTP协议解析 | 请求/响应格式、状态码、Header解析 |
-| Day18 | 📅 | HTTP长连接 | Keep-Alive、连接复用 |
-| Day19 | 📅 | Chunked分块传输 | Transfer-Encoding: chunked、流式响应 |
+| Day18 | ✅ | HTTP长连接 | Keep-Alive、连接复用 |
+| Day19 | ✅ | Chunked分块传输 | Transfer-Encoding: chunked、流式响应 |
 | Day20 | 📅 | 静态文件服务 | 文件读取、Content-Type、MIME |
 | Day21 | 📅 | 连接超时与优雅关闭 | 资源回收、收尾处理 |
 | Day22 | 📅 | 整合测试 | 模块联调、边界情况 |
@@ -42,9 +42,9 @@
 
 ## 当前进度
 
-**68% 完成** (17/25 天)
+**76% 完成** (19/25 天)
 
-已完成服务器核心I/O模型，进入HTTP协议栈阶段。
+已完成HTTP长连接和分块传输，进入高级HTTP特性阶段。
 
 ### 已掌握技能
 
@@ -59,11 +59,13 @@
 ✅ 信号处理             (Day15)
 ✅ 网络选项优化         (Day16)
 ✅ HTTP协议解析         (Day17)
+✅ HTTP长连接           (Day18)
+✅ Chunked分块传输      (Day19)
 ```
 
 ### 下一步
 
-Day18: HTTP长连接 (Keep-Alive、连接复用)
+Day20: 静态文件服务 (文件读取、Content-Type、MIME)
 
 ## 设计原则
 

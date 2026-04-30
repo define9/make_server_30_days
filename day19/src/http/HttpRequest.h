@@ -67,12 +67,17 @@ public:
     // 内容长度
     int64_t contentLength() const;
 
+    // 请求体
+    const std::string& body() const { return m_body; }
+    void appendBody(const char* data, size_t len) { m_body.append(data, len); }
+
 private:
     HttpMethod m_method;
     HttpVersion m_version;
     std::string m_url;
     std::string m_path;
     std::map<std::string, std::string> m_headers;
+    std::string m_body;
     bool m_complete;
 };
 

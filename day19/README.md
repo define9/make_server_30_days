@@ -172,14 +172,37 @@ curl -v -k -X POST http://localhost:8080/ \
 
 ## 预期输出
 
+### Chunked请求解析日志
+
 ```
-========================================
-  Day19: Chunked Transfer Encoding
-========================================
-...
-[Connection] Worker 0 sending chunk 5 bytes
-[Connection] Worker 0 sending chunk 6 bytes
-[Connection] Worker 0 sent final chunk (0 bytes)
+[2026-04-30 17:20:26.132] [INFO] [src/net/Server.cpp:96] Accepted client: 127.0.0.1:44088 (fd=10)
+[2026-04-30 17:20:26.133] [DEBUG] [src/net/Server.cpp:110] -> Worker 0
+[2026-04-30 17:20:26.133] [DEBUG] [src/net/Connection.cpp:118] Worker 0 read 204 bytes from 127.0.0.1:44088
+[2026-04-30 17:20:26.133] [INFO] [src/net/Connection.cpp:143] HTTP POST / from 127.0.0.1:44088
+```
+
+**注意**：Chunked请求 `5\r\nhello\r\n6\r\n world\r\n0\r\n\r\n` 在一次 `read()` 中完成解析（204 bytes），包括末尾的 `\r\n`。
+
+### curl响应
+
+```
+< HTTP/1.1 200 OK
+< Connection: keep-alive
+< Content-Length: 192
+< Content-Type: text/plain
+
+HTTP Request Received
+Method: POST
+URL: /
+Path: /
+HTTP Version: 1.1
+Connection: keep-alive
+
+Headers:
+  accept: */*
+  host: localhost:8080
+  transfer-encoding: chunked
+  user-agent: curl/8.5.0
 ```
 
 ## 下一步
