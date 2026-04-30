@@ -33,8 +33,8 @@
 | Day17 | ✅ | HTTP协议解析 | 请求/响应格式、状态码、Header解析 |
 | Day18 | ✅ | HTTP长连接 | Keep-Alive、连接复用 |
 | Day19 | ✅ | Chunked分块传输 | Transfer-Encoding: chunked、流式响应 |
-| Day20 | 📅 | 静态文件服务 | 文件读取、Content-Type、MIME |
-| Day21 | 📅 | 连接超时与优雅关闭 | 资源回收、收尾处理 |
+| Day20 | ✅ | 静态文件服务 | 文件读取、Content-Type、MIME |
+| Day21 | ✅ | 请求路由 | URL模式匹配、RESTful路由、路由参数 |
 | Day22 | 📅 | 整合测试 | 模块联调、边界情况 |
 | Day23 | 📅 | 细节打磨 | 错误处理、边界条件 |
 | Day24 | 📅 | SSE / Stream HTTP | text/event-stream、流式推送 |
@@ -42,9 +42,9 @@
 
 ## 当前进度
 
-**76% 完成** (19/25 天)
+**84% 完成** (21/25 天)
 
-已完成HTTP长连接和分块传输，进入高级HTTP特性阶段。
+已完成HTTP长连接、分块传输和路由，进入高级HTTP特性阶段。
 
 ### 已掌握技能
 
@@ -61,11 +61,13 @@
 ✅ HTTP协议解析         (Day17)
 ✅ HTTP长连接           (Day18)
 ✅ Chunked分块传输      (Day19)
+✅ 静态文件服务         (Day20)
+✅ 请求路由             (Day21)
 ```
 
 ### 下一步
 
-Day20: 静态文件服务 (文件读取、Content-Type、MIME)
+Day22: 整合测试 (模块联调、边界情况)
 
 ## 设计原则
 
